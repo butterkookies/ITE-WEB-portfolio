@@ -1,0 +1,34 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "Portfolio Index HTML",
+      "file_type": "document",
+      "source_file": "index.html",
+      "id": "portfolio_index",
+      "community": 0,
+      "norm_label": "portfolio index html"
+    },
+    {
+      "label": "Portfolio Style CSS",
+      "file_type": "document",
+      "source_file": "style.css",
+      "id": "portfolio_style",
+      "community": 0,
+      "norm_label": "portfolio style css"
+    }
+  ],
+  "links": [
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source": "portfolio_index",
+      "target": "portfolio_style"
+    }
+  ],
+  "hyperedges": []
+}

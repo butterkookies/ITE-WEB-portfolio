@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio showcasing IT31 Web Systems and Technologies laboratory activities, projects, and skills.">
+    <title>Andrei | Web Systems & Technologies Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================================================
+         HEADER & NAVIGATION BAR
+         - Contains branding / logo and internal anchor links for on-page navigation.
+         - All hrefs reference IDs on this page (e.g., #home, #about, #skills, etc.).
+         ========================================================================== -->
+    <header id="top">
+        <nav aria-label="Main Navigation">
+            <!-- Brand / Logo Link -->
+            <a href="#home" class="brand-logo">Andrei.dev</a>
+
+            <!-- On-Page Navigation Links -->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#activities">Lab Activities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         MAIN CONTENT CONTAINER
+         - Houses all primary sections of the single-page portfolio.
+         ========================================================================== -->
+    <main>
+
+        <!-- ======================================================================
+             HERO / INTRO SECTION
+             - Section ID: #home
+             - Initial impression, introducing the student and field of study.
+             ====================================================================== -->
+        <section id="home">
+            <p class="section-tagline">Hello & Welcome, I'm</p>
+            <h1>Andrei</h1>
+            <h2>3rd Year BS Information Technology Student</h2>
+            <p>
+                Specializing in Web Systems and Technologies (IT31). Passionate about crafting
+                clean, accessible, and responsive user interfaces using foundational web technologies.
+            </p>
+
+            <!-- Quick Action Links (Jumps within the same page) -->
+            <div class="hero-actions">
+                <a href="#activities" class="btn btn-primary">View Lab Activities</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             ABOUT ME SECTION
+             - Section ID: #about
+             - Educational background, aspirations, and coursework overview.
+             ====================================================================== -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="section-subtitle">A quick introduction to my academic journey and interests</p>
+
+            <article class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am currently a 3rd-year Bachelor of Science in Information Technology student.
+                        This portfolio serves as a central hub documenting my laboratory exercises, assignments,
+                        and practical coding projects for our course: <strong>IT31 - Web Systems and
+                            Technologies</strong>.
+                    </p>
+                    <p>
+                        My focus is on strengthening my mastery over core web standards (HTML5 semantics, modern CSS
+                        layouts,
+                        and vanilla JavaScript), while developing clean coding habits, modular project structure, and
+                        responsive design principles.
+                    </p>
+                </div>
+
+                <!-- Academic Highlights / Quick Facts -->
+                <div class="about-highlights">
+                    <ul>
+                        <li><strong>Program:</strong> BS in Information Technology (BSIT)</li>
+                        <li><strong>Year Level:</strong> 3rd Year - 1st Semester</li>
+                        <li><strong>Subject:</strong> IT31 - Web Systems and Technologies</li>
+                        <li><strong>Focus Areas:</strong> Frontend Web Development, UI/UX Structure</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- ======================================================================
+             SKILLS SECTION
+             - Section ID: #skills
+             - Flat list / grid of web technologies, tools, and developer practices.
+             ====================================================================== -->
+        <section id="skills">
+            <h2>Skill Sets</h2>
+            <p class="section-subtitle">Technologies, languages, and tools I use in my web development coursework</p>
+
+            <ul class="skills-list">
+                <!-- Core Web Technologies -->
+                <li class="skill-item">
+                    <h3>HTML5</h3>
+                    <p>Semantic markup, document structure, forms, tables, and web accessibility (a11y).</p>
+                </li>
+                <li class="skill-item">
+                    <h3>CSS3</h3>
+                    <p>Box model, Flexbox, CSS Grid, typography, media queries, and responsive design.</p>
+                </li>
+                <li class="skill-item">
+                    <h3>JavaScript (ES6+)</h3>
+                    <p>DOM manipulation, event handling, ES6 syntax, functions, and dynamic interactions.</p>
+                </li>
+
+                <!-- Developer Tools & Environment -->
+                <li class="skill-item">
+                    <h3>Git & GitHub</h3>
+                    <p>Version control, branch management, repositories, and project tracking.</p>
+                </li>
+                <li class="skill-item">
+                    <h3>VS Code</h3>
+                    <p>Code editing, debugging, linting, extensions, and workflow productivity.</p>
+                </li>
+                <li class="skill-item">
+                    <h3>Responsive Web Design</h3>
+                    <p>Mobile-first layouts, fluid grids, and cross-browser compatibility.</p>
+                </li>
+                <li class="skill-item">
+                    <h3>Web Standards & SEO</h3>
+                    <p>Valid W3C markup, metadata configuration, clean URL routing, and basic SEO.</p>
+                </li>
+                <li class="skill-item">
+                    <h3>Browser Developer Tools</h3>
+                    <p>Inspecting elements, console debugging, network monitoring, and layout tuning.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ======================================================================
+             LAB ACTIVITIES & PROJECTS SECTION
+             - Section ID: #activities
+             - Collection of laboratory exercises and hands-on coding activities.
+             - Each lab activity is represented in a card structure with:
+                 1. Thumbnail / preview container (<figure>)
+                 2. Activity title & lab category badge
+                 3. Short description / learning objective
+                 4. Tech stack tags
+                 5. Action links (Live Demo & Source Code)
+             ====================================================================== -->
+        <section id="activities">
+            <h2>Lab Activities</h2>
+            <p class="section-subtitle">Interactive archive of laboratory exercises and coursework for IT31 (Click any folder to open)</p>
+
+            <div class="activities-grid">
+
+                <!-- LAB ACTIVITY 1 -->
+                <article class="activity-card folder-card" id="lab-1" tabindex="0" aria-label="Lab 1 Folder">
+                    <div class="folder-wrapper">
+                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <span class="folder-tab-label">LAB 01</span>
+
+                        <!-- Sliding Paper Sheet Wrapper -->
+                        <div class="folder-sheet-wrapper">
+                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet">
+                                <div class="sheet-badge">Lab 01</div>
+                                <figure class="card-preview">
+                                    <img src="images/lab1-preview.png" alt="Preview of Lab Activity 1">
+                                    <figcaption>Lab 1 Preview</figcaption>
+                                </figure>
+                                <div class="card-content">
+                                    <h3>Semantic HTML & Bio Page</h3>
+                                    <p>
+                                        Introduction to basic HTML document anatomy, semantic containers (header, nav, main, footer),
+                                        content hierarchy, text formatting, and accessibility.
+                                    </p>
+                                    <ul class="tech-tags">
+                                        <li>HTML5</li>
+                                        <li>Semantic Tags</li>
+                                        <li>Accessibility</li>
+                                    </ul>
+                                    <div class="card-actions">
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Front Pocket PNGs -->
+                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                    </div>
+                </article>
+
+                <!-- LAB ACTIVITY 2 -->
+                <article class="activity-card folder-card" id="lab-2" tabindex="0" aria-label="Lab 2 Folder">
+                    <div class="folder-wrapper">
+                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <span class="folder-tab-label">LAB 02</span>
+
+                        <!-- Sliding Paper Sheet Wrapper -->
+                        <div class="folder-sheet-wrapper">
+                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet">
+                                <div class="sheet-badge">Lab 02</div>
+                                <figure class="card-preview">
+                                    <img src="images/lab2-preview.png" alt="Preview of Lab Activity 2">
+                                    <figcaption>Lab 2 Preview</figcaption>
+                                </figure>
+                                <div class="card-content">
+                                    <h3>Registration & Survey Forms</h3>
+                                    <p>
+                                        Constructing complex HTML forms utilizing input types, fieldsets, labels,
+                                        client-side validations, and structured data tables.
+                                    </p>
+                                    <ul class="tech-tags">
+                                        <li>HTML5 Forms</li>
+                                        <li>Validation</li>
+                                        <li>Tables</li>
+                                    </ul>
+                                    <div class="card-actions">
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Front Pocket PNGs -->
+                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                    </div>
+                </article>
+
+                <!-- LAB ACTIVITY 3 -->
+                <article class="activity-card folder-card" id="lab-3" tabindex="0" aria-label="Lab 3 Folder">
+                    <div class="folder-wrapper">
+                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <span class="folder-tab-label">LAB 03</span>
+
+                        <!-- Sliding Paper Sheet Wrapper -->
+                        <div class="folder-sheet-wrapper">
+                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet">
+                                <div class="sheet-badge">Lab 03</div>
+                                <figure class="card-preview">
+                                    <img src="images/lab3-preview.png" alt="Preview of Lab Activity 3">
+                                    <figcaption>Lab 3 Preview</figcaption>
+                                </figure>
+                                <div class="card-content">
+                                    <h3>CSS Layouts: Flexbox & Grid</h3>
+                                    <p>
+                                        Applying modern CSS positioning techniques, Flexbox alignment, CSS Grid templates,
+                                        and responsive media queries for multi-column web pages.
+                                    </p>
+                                    <ul class="tech-tags">
+                                        <li>CSS3</li>
+                                        <li>Flexbox</li>
+                                        <li>CSS Grid</li>
+                                    </ul>
+                                    <div class="card-actions">
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Front Pocket PNGs -->
+                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                    </div>
+                </article>
+
+                <!-- LAB ACTIVITY 4 -->
+                <article class="activity-card folder-card" id="lab-4" tabindex="0" aria-label="Lab 4 Folder">
+                    <div class="folder-wrapper">
+                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <span class="folder-tab-label">LAB 04</span>
+
+                        <!-- Sliding Paper Sheet Wrapper -->
+                        <div class="folder-sheet-wrapper">
+                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet">
+                                <div class="sheet-badge">Lab 04</div>
+                                <figure class="card-preview">
+                                    <img src="images/lab4-preview.png" alt="Preview of Lab Activity 4">
+                                    <figcaption>Lab 4 Preview</figcaption>
+                                </figure>
+                                <div class="card-content">
+                                    <h3>Interactive DOM Manipulation</h3>
+                                    <p>
+                                        Implementing client-side interactivity using vanilla JavaScript: event listeners,
+                                        dynamic element creation, and interactive calculations.
+                                    </p>
+                                    <ul class="tech-tags">
+                                        <li>JavaScript</li>
+                                        <li>DOM API</li>
+                                        <li>Events</li>
+                                    </ul>
+                                    <div class="card-actions">
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Front Pocket PNGs -->
+                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                    </div>
+                </article>
+
+                <!-- LAB ACTIVITY 5 -->
+                <article class="activity-card folder-card" id="lab-5" tabindex="0" aria-label="Lab 5 Folder">
+                    <div class="folder-wrapper">
+                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <span class="folder-tab-label">LAB 05</span>
+
+                        <!-- Sliding Paper Sheet Wrapper -->
+                        <div class="folder-sheet-wrapper">
+                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet">
+                                <div class="sheet-badge">Lab 05</div>
+                                <figure class="card-preview">
+                                    <img src="images/lab5-preview.png" alt="Preview of Lab Activity 5">
+                                    <figcaption>Lab 5 Preview</figcaption>
+                                </figure>
+                                <div class="card-content">
+                                    <h3>Dynamic Fetch & API Integration</h3>
+                                    <p>
+                                        Connecting frontend markup to external data sources using JavaScript Fetch API,
+                                        handling asynchronous JSON promises, and rendering dynamic cards.
+                                    </p>
+                                    <ul class="tech-tags">
+                                        <li>JavaScript ES6</li>
+                                        <li>Fetch API</li>
+                                        <li>Async/Await</li>
+                                    </ul>
+                                    <div class="card-actions">
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Front Pocket PNGs -->
+                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                    </div>
+                </article>
+
+                <!-- LAB ACTIVITY 6 -->
+                <article class="activity-card folder-card" id="lab-6" tabindex="0" aria-label="Lab 6 Folder">
+                    <div class="folder-wrapper">
+                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <span class="folder-tab-label">LAB 06</span>
+
+                        <!-- Sliding Paper Sheet Wrapper -->
+                        <div class="folder-sheet-wrapper">
+                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet">
+                                <div class="sheet-badge">Lab 06</div>
+                                <figure class="card-preview">
+                                    <img src="images/lab6-preview.png" alt="Preview of Lab Activity 6">
+                                    <figcaption>Lab 6 Preview</figcaption>
+                                </figure>
+                                <div class="card-content">
+                                    <h3>Responsive Mini Web Project</h3>
+                                    <p>
+                                        Capstone laboratory exercise integrating semantic HTML5, responsive CSS,
+                                        and interactive JavaScript into a comprehensive multi-section web application.
+                                    </p>
+                                    <ul class="tech-tags">
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                        <li>Responsive</li>
+                                    </ul>
+                                    <div class="card-actions">
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Front Pocket PNGs -->
+                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             CONTACT SECTION
+             - Section ID: #contact
+             - Direct communication channels and a semantic contact form.
+             ====================================================================== -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p class="section-subtitle">Feel free to reach out for inquiries, collaboration, or feedback</p>
+
+            <div class="contact-wrapper">
+
+                <!-- Direct Contact Information -->
+                <address class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Have questions about my lab submissions or interested in collaborating? Contact me through any of
+                        the channels below:</p>
+                    <ul>
+                        <li>
+                            <strong>Email:</strong>
+                            <a href="mailto:geronimoandreijohn.pdm@gmail.com">geronimoandreijohn.pdm@gmail.com</a>
+                        </li>
+                        <li>
+                            <strong>GitHub:</strong>
+                            <a href="https://github.com/butterkookies" target="_blank"
+                                rel="noopener noreferrer">github.com/butterkookies</a>
+                        </li>
+                        <li>
+                            <strong>LinkedIn:</strong>
+                            <a href="https://www.linkedin.com/in/geronimo-andrei-john-p-931472413/" target="_blank"
+                                rel="noopener noreferrer">linkedin.com/in/geronimo-andrei-john-p-931472413/</a>
+                        </li>
+                        <li>
+                            <strong>Location:</strong> Philippines
+                        </li>
+                    </ul>
+                </address>
+
+                <!-- Semantic Contact Form -->
+                <div class="contact-form-container">
+                    <h3>Send a Message</h3>
+                    <form action="#" method="post" class="contact-form">
+
+                        <!-- Full Name Field -->
+                        <div class="form-group">
+                            <label for="contact-name">Full Name:</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Juan Dela Cruz" required>
+                        </div>
+
+                        <!-- Email Address Field -->
+                        <div class="form-group">
+                            <label for="contact-email">Email Address:</label>
+                            <input type="email" id="contact-email" name="email" placeholder="juan@example.com" required>
+                        </div>
+
+                        <!-- Subject Field -->
+                        <div class="form-group">
+                            <label for="contact-subject">Subject:</label>
+                            <input type="text" id="contact-subject" name="subject"
+                                placeholder="Inquiry regarding Lab Activity..." required>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="form-group">
+                            <label for="contact-message">Your Message:</label>
+                            <textarea id="contact-message" name="message" rows="5"
+                                placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit">Send Message</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER
+         - Copyright note, quick links, and a back-to-top on-page anchor.
+         ========================================================================== -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Andrei. All rights reserved. Built for IT31 - Web Systems and Technologies.</p>
+
+            <!-- Quick footer jump links -->
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#activities">Lab Activities</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#top">Back to Top &uarr;</a></li>
+            </ul>
+        </div>
+    <!-- Interactive Folder Script -->
+    <script>
+        document.querySelectorAll('.folder-card').forEach(card => {
+            const toggleFolder = (e) => {
+                // Do not toggle if the user is clicking on action links or buttons inside
+                if (e.target.closest('a') || e.target.closest('button')) {
+                    return;
+                }
+                const isOpen = card.classList.toggle('is-open');
+                const hint = card.querySelector('.folder-hint');
+                if (hint) {
+                    hint.textContent = isOpen ? 'Click to Close' : 'Click to Open';
+                }
+            };
+
+            card.addEventListener('click', toggleFolder);
+
+            // Keyboard accessibility (Enter / Space)
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    if (e.target === card) {
+                        e.preventDefault();
+                        toggleFolder(e);
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
