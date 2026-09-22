@@ -207,7 +207,7 @@
             <div class="activities-grid">
 
                 <!-- LAB ACTIVITY 1 -->
-                <article class="activity-card folder-card" id="lab-1" tabindex="0" aria-label="Lab 1 Folder">
+                <article class="activity-card folder-card" id="lab-1" tabindex="0" aria-label="Lab 1 Folder" data-lab-url="labs/lab1/index.html" data-lab-title="Lab Activity 01: Semantic HTML &amp; Bio Page" data-lab-badge="Lab 01">
                     <div class="folder-wrapper">
                         <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 01</span>
@@ -238,7 +238,7 @@
                 </article>
 
                 <!-- LAB ACTIVITY 2 -->
-                <article class="activity-card folder-card" id="lab-2" tabindex="0" aria-label="Lab 2 Folder">
+                <article class="activity-card folder-card" id="lab-2" tabindex="0" aria-label="Lab 2 Folder" data-lab-url="labs/lab2/index.html" data-lab-title="Lab Activity 02: Registration &amp; Survey Forms" data-lab-badge="Lab 02">
                     <div class="folder-wrapper">
                         <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 02</span>
@@ -269,7 +269,7 @@
                 </article>
 
                 <!-- LAB ACTIVITY 3 -->
-                <article class="activity-card folder-card" id="lab-3" tabindex="0" aria-label="Lab 3 Folder">
+                <article class="activity-card folder-card" id="lab-3" tabindex="0" aria-label="Lab 3 Folder" data-lab-url="labs/lab3/index.html" data-lab-title="Lab Activity 03: CSS Layouts: Flexbox &amp; Grid" data-lab-badge="Lab 03">
                     <div class="folder-wrapper">
                         <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 03</span>
@@ -300,7 +300,7 @@
                 </article>
 
                 <!-- LAB ACTIVITY 4 -->
-                <article class="activity-card folder-card" id="lab-4" tabindex="0" aria-label="Lab 4 Folder">
+                <article class="activity-card folder-card" id="lab-4" tabindex="0" aria-label="Lab 4 Folder" data-lab-url="labs/lab4/index.html" data-lab-title="Lab Activity 04: Interactive DOM Manipulation" data-lab-badge="Lab 04">
                     <div class="folder-wrapper">
                         <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 04</span>
@@ -331,7 +331,7 @@
                 </article>
 
                 <!-- LAB ACTIVITY 5 -->
-                <article class="activity-card folder-card" id="lab-5" tabindex="0" aria-label="Lab 5 Folder">
+                <article class="activity-card folder-card" id="lab-5" tabindex="0" aria-label="Lab 5 Folder" data-lab-url="labs/lab5/index.html" data-lab-title="Lab Activity 05: Dynamic Fetch &amp; API Integration" data-lab-badge="Lab 05">
                     <div class="folder-wrapper">
                         <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 05</span>
@@ -362,7 +362,7 @@
                 </article>
 
                 <!-- LAB ACTIVITY 6 -->
-                <article class="activity-card folder-card" id="lab-6" tabindex="0" aria-label="Lab 6 Folder">
+                <article class="activity-card folder-card" id="lab-6" tabindex="0" aria-label="Lab 6 Folder" data-lab-url="labs/lab6/index.html" data-lab-title="Lab Activity 06: Responsive Mini Web Project" data-lab-badge="Lab 06">
                     <div class="folder-wrapper">
                         <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 06</span>
@@ -494,32 +494,98 @@
                 <li><a href="#top">Back to Top &uarr;</a></li>
             </ul>
         </div>
-    <!-- Interactive Folder Script -->
+    </footer>
+
+    <!-- ==========================================================================
+         LAB PROJECT MODAL (Centered, Blurred Backdrop)
+         ========================================================================== -->
+    <div id="lab-modal" class="lab-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-backdrop"></div>
+        <div class="modal-window">
+            <header class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-badge" id="modal-badge">Lab Activity</span>
+                    <h3 id="modal-title">Lab Activity Title</h3>
+                </div>
+                <div class="modal-actions">
+                    <a href="#" id="modal-new-tab-btn" target="_blank" rel="noopener noreferrer" class="btn-new-tab" title="Open project in new tab">
+                        <span>Open in New Tab</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                    <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+            <div class="modal-body">
+                <iframe id="modal-iframe" src="" title="Lab Project Preview"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Folder & Modal Script -->
     <script>
+        const modal = document.getElementById('lab-modal');
+        const modalBackdrop = modal.querySelector('.modal-backdrop');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBadge = document.getElementById('modal-badge');
+        const modalIframe = document.getElementById('modal-iframe');
+        const modalNewTabBtn = document.getElementById('modal-new-tab-btn');
+
+        function openLabModal(url, title, badge) {
+            modalIframe.src = url;
+            modalTitle.textContent = title;
+            modalBadge.textContent = badge;
+            modalNewTabBtn.href = url;
+            modal.classList.add('is-active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLabModal() {
+            modal.classList.remove('is-active');
+            modal.setAttribute('aria-hidden', 'true');
+            modalIframe.src = '';
+            document.body.style.overflow = '';
+        }
+
         document.querySelectorAll('.folder-card').forEach(card => {
-            const toggleFolder = (e) => {
-                // Do not toggle if the user is clicking on action links or buttons inside
-                if (e.target.closest('a') || e.target.closest('button')) {
-                    return;
-                }
-                const isOpen = card.classList.toggle('is-open');
-                const hint = card.querySelector('.folder-hint');
-                if (hint) {
-                    hint.textContent = isOpen ? 'Click to Close' : 'Click to Open';
+            const handleOpen = () => {
+                const url = card.getAttribute('data-lab-url');
+                const title = card.getAttribute('data-lab-title');
+                const badge = card.getAttribute('data-lab-badge');
+                if (url) {
+                    openLabModal(url, title, badge);
                 }
             };
 
-            card.addEventListener('click', toggleFolder);
+            card.addEventListener('click', handleOpen);
 
             // Keyboard accessibility (Enter / Space)
             card.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     if (e.target === card) {
                         e.preventDefault();
-                        toggleFolder(e);
+                        handleOpen();
                     }
                 }
             });
+        });
+
+        modalCloseBtn.addEventListener('click', closeLabModal);
+        modalBackdrop.addEventListener('click', closeLabModal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+                closeLabModal();
+            }
         });
     </script>
 
