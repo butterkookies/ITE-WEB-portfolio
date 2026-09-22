@@ -256,6 +256,8 @@ section {
     position: relative;
     width: 100%;
     height: 100%;
+    perspective: 900px;
+    transform-style: preserve-3d;
 }
 
 /* Common PNG layer styling */
@@ -294,20 +296,21 @@ section {
     text-transform: uppercase;
 }
 
-/* 2. Sliding Paper Sheet Wrapper (Hidden completely inside folder pocket when idle) */
+/* 2. Sliding Paper Sheet Wrapper (Slightly seen in default look, slides up on hover) */
 .folder-sheet-wrapper {
     position: absolute;
     left: 50%;
-    bottom: 14px;
+    bottom: 24px;
     transform: translateX(-50%) translateY(0);
     width: 88%;
     max-width: 388px;
-    height: 235px;
+    height: 260px;
     z-index: 2;
     opacity: 1;
     pointer-events: none;
-    /* Physics transition for sliding up/down */
-    transition: transform 0.35s cubic-bezier(0.34, 1.25, 0.64, 1);
+    /* Smooth physical slide-up physics */
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
 }
 
 /* Offset background paper sheet (matches images/folder/opened-paper2.png in Figma) */
@@ -441,10 +444,12 @@ section {
 .folder-png.folder-front {
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotateX(0deg);
+    transform-origin: bottom center;
     z-index: 4;
     pointer-events: none;
-    transition: opacity 0.35s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+    will-change: transform;
 }
 
 .folder-png.front-closed {
@@ -454,27 +459,22 @@ section {
 }
 
 .folder-png.front-opened {
-    width: 108%;
-    max-width: 485px;
-    opacity: 0;
+    display: none;
 }
 
 /* ==========================================================================
-   HOVER PEEK & INTERACTIVE FOLDER STATES
+   HOVER MORPH & INTERACTIVE FOLDER STATES
    ========================================================================== */
 
-/* Hover: Paper sheet smoothly appears upward out of the folder pocket */
+/* Hover: Paper sheet smoothly slides upward even more */
 .activity-card.folder-card:hover .folder-sheet-wrapper {
-    transform: translateX(-50%) translateY(-55px);
+    transform: translateX(-50%) translateY(-75px);
 }
 
-/* Front Pocket swaps to opened flap on hover */
-.activity-card.folder-card:hover .front-closed {
-    opacity: 0;
-}
-
-.activity-card.folder-card:hover .front-opened {
-    opacity: 1;
+/* Hover: Front folder morphs/folds open forward in 3D (no fading) */
+.activity-card.folder-card:hover .folder-png.folder-front {
+    transform: translateX(-50%) rotateX(-24deg);
+    filter: drop-shadow(0 14px 18px rgba(67, 41, 20, 0.22));
 }
 
 /* Placeholder Sheet Styling */
