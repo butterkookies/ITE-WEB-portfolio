@@ -45,6 +45,9 @@
              - Initial impression, introducing the student and field of study.
              ====================================================================== -->
         <section id="home">
+            <div class="hero-avatar-wrapper">
+                <img src="images/profile.png" alt="Andrei - Profile Picture" class="hero-avatar" width="130" height="130">
+            </div>
             <p class="section-tagline">Hello & Welcome, I'm</p>
             <h1>Andrei</h1>
             <h2>3rd Year BS Information Technology Student</h2>
@@ -109,37 +112,78 @@
             <ul class="skills-list">
                 <!-- Core Web Technologies -->
                 <li class="skill-item">
-                    <h3>HTML5</h3>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrapper">
+                            <img src="icons/html5.svg" alt="HTML5 Logo" class="skill-icon">
+                        </div>
+                        <h3>HTML5</h3>
+                    </div>
                     <p>Semantic markup, document structure, forms, tables, and web accessibility (a11y).</p>
                 </li>
                 <li class="skill-item">
-                    <h3>CSS3</h3>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrapper">
+                            <img src="icons/css3.svg" alt="CSS3 Logo" class="skill-icon">
+                        </div>
+                        <h3>CSS3</h3>
+                    </div>
                     <p>Box model, Flexbox, CSS Grid, typography, media queries, and responsive design.</p>
                 </li>
                 <li class="skill-item">
-                    <h3>JavaScript (ES6+)</h3>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrapper">
+                            <img src="icons/javascript.svg" alt="JavaScript Logo" class="skill-icon">
+                        </div>
+                        <h3>JavaScript (ES6+)</h3>
+                    </div>
                     <p>DOM manipulation, event handling, ES6 syntax, functions, and dynamic interactions.</p>
                 </li>
 
                 <!-- Developer Tools & Environment -->
                 <li class="skill-item">
-                    <h3>Git & GitHub</h3>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrapper skill-icon-dual">
+                            <img src="icons/git.svg" alt="Git Logo" class="skill-icon">
+                            <img src="icons/github.svg" alt="GitHub Logo" class="skill-icon">
+                        </div>
+                        <h3>Git & GitHub</h3>
+                    </div>
                     <p>Version control, branch management, repositories, and project tracking.</p>
                 </li>
                 <li class="skill-item">
-                    <h3>VS Code</h3>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrapper">
+                            <img src="icons/vscode.svg" alt="VS Code Logo" class="skill-icon">
+                        </div>
+                        <h3>VS Code</h3>
+                    </div>
                     <p>Code editing, debugging, linting, extensions, and workflow productivity.</p>
                 </li>
                 <li class="skill-item">
-                    <h3>Responsive Web Design</h3>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrapper">
+                            <img src="icons/responsive.svg" alt="Responsive Web Design Icon" class="skill-icon">
+                        </div>
+                        <h3>Responsive Web Design</h3>
+                    </div>
                     <p>Mobile-first layouts, fluid grids, and cross-browser compatibility.</p>
                 </li>
                 <li class="skill-item">
-                    <h3>Web Standards & SEO</h3>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrapper">
+                            <img src="icons/web-standards.svg" alt="Web Standards & SEO Icon" class="skill-icon">
+                        </div>
+                        <h3>Web Standards & SEO</h3>
+                    </div>
                     <p>Valid W3C markup, metadata configuration, clean URL routing, and basic SEO.</p>
                 </li>
                 <li class="skill-item">
-                    <h3>Browser Developer Tools</h3>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrapper">
+                            <img src="icons/devtools.svg" alt="Browser Developer Tools Icon" class="skill-icon">
+                        </div>
+                        <h3>Browser Developer Tools</h3>
+                    </div>
                     <p>Inspecting elements, console debugging, network monitoring, and layout tuning.</p>
                 </li>
             </ul>
@@ -165,240 +209,186 @@
                 <!-- LAB ACTIVITY 1 -->
                 <article class="activity-card folder-card" id="lab-1" tabindex="0" aria-label="Lab 1 Folder">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 01</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
                         <div class="folder-sheet-wrapper">
-                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
-                            <div class="folder-sheet">
+                            <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 01</div>
-                                <figure class="card-preview">
-                                    <img src="images/lab1-preview.png" alt="Preview of Lab Activity 1">
-                                    <figcaption>Lab 1 Preview</figcaption>
-                                </figure>
-                                <div class="card-content">
-                                    <h3>Semantic HTML & Bio Page</h3>
-                                    <p>
-                                        Introduction to basic HTML document anatomy, semantic containers (header, nav, main, footer),
-                                        content hierarchy, text formatting, and accessibility.
-                                    </p>
-                                    <ul class="tech-tags">
-                                        <li>HTML5</li>
-                                        <li>Semantic Tags</li>
-                                        <li>Accessibility</li>
-                                    </ul>
-                                    <div class="card-actions">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
-                                    </div>
+                                <div class="placeholder-graphic">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="card-content placeholder-content">
+                                    <h3>Lab Activity 01</h3>
+                                    <p>Activity documentation and source code are currently in progress.</p>
+                                    <span class="status-badge">Coming Soon</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
                 <!-- LAB ACTIVITY 2 -->
                 <article class="activity-card folder-card" id="lab-2" tabindex="0" aria-label="Lab 2 Folder">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 02</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
                         <div class="folder-sheet-wrapper">
-                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
-                            <div class="folder-sheet">
+                            <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 02</div>
-                                <figure class="card-preview">
-                                    <img src="images/lab2-preview.png" alt="Preview of Lab Activity 2">
-                                    <figcaption>Lab 2 Preview</figcaption>
-                                </figure>
-                                <div class="card-content">
-                                    <h3>Registration & Survey Forms</h3>
-                                    <p>
-                                        Constructing complex HTML forms utilizing input types, fieldsets, labels,
-                                        client-side validations, and structured data tables.
-                                    </p>
-                                    <ul class="tech-tags">
-                                        <li>HTML5 Forms</li>
-                                        <li>Validation</li>
-                                        <li>Tables</li>
-                                    </ul>
-                                    <div class="card-actions">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
-                                    </div>
+                                <div class="placeholder-graphic">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="card-content placeholder-content">
+                                    <h3>Lab Activity 02</h3>
+                                    <p>Activity documentation and source code are currently in progress.</p>
+                                    <span class="status-badge">Coming Soon</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
                 <!-- LAB ACTIVITY 3 -->
                 <article class="activity-card folder-card" id="lab-3" tabindex="0" aria-label="Lab 3 Folder">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 03</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
                         <div class="folder-sheet-wrapper">
-                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
-                            <div class="folder-sheet">
+                            <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 03</div>
-                                <figure class="card-preview">
-                                    <img src="images/lab3-preview.png" alt="Preview of Lab Activity 3">
-                                    <figcaption>Lab 3 Preview</figcaption>
-                                </figure>
-                                <div class="card-content">
-                                    <h3>CSS Layouts: Flexbox & Grid</h3>
-                                    <p>
-                                        Applying modern CSS positioning techniques, Flexbox alignment, CSS Grid templates,
-                                        and responsive media queries for multi-column web pages.
-                                    </p>
-                                    <ul class="tech-tags">
-                                        <li>CSS3</li>
-                                        <li>Flexbox</li>
-                                        <li>CSS Grid</li>
-                                    </ul>
-                                    <div class="card-actions">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
-                                    </div>
+                                <div class="placeholder-graphic">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="card-content placeholder-content">
+                                    <h3>Lab Activity 03</h3>
+                                    <p>Activity documentation and source code are currently in progress.</p>
+                                    <span class="status-badge">Coming Soon</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
                 <!-- LAB ACTIVITY 4 -->
                 <article class="activity-card folder-card" id="lab-4" tabindex="0" aria-label="Lab 4 Folder">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 04</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
                         <div class="folder-sheet-wrapper">
-                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
-                            <div class="folder-sheet">
+                            <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 04</div>
-                                <figure class="card-preview">
-                                    <img src="images/lab4-preview.png" alt="Preview of Lab Activity 4">
-                                    <figcaption>Lab 4 Preview</figcaption>
-                                </figure>
-                                <div class="card-content">
-                                    <h3>Interactive DOM Manipulation</h3>
-                                    <p>
-                                        Implementing client-side interactivity using vanilla JavaScript: event listeners,
-                                        dynamic element creation, and interactive calculations.
-                                    </p>
-                                    <ul class="tech-tags">
-                                        <li>JavaScript</li>
-                                        <li>DOM API</li>
-                                        <li>Events</li>
-                                    </ul>
-                                    <div class="card-actions">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
-                                    </div>
+                                <div class="placeholder-graphic">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="card-content placeholder-content">
+                                    <h3>Lab Activity 04</h3>
+                                    <p>Activity documentation and source code are currently in progress.</p>
+                                    <span class="status-badge">Coming Soon</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
                 <!-- LAB ACTIVITY 5 -->
                 <article class="activity-card folder-card" id="lab-5" tabindex="0" aria-label="Lab 5 Folder">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 05</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
                         <div class="folder-sheet-wrapper">
-                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
-                            <div class="folder-sheet">
+                            <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 05</div>
-                                <figure class="card-preview">
-                                    <img src="images/lab5-preview.png" alt="Preview of Lab Activity 5">
-                                    <figcaption>Lab 5 Preview</figcaption>
-                                </figure>
-                                <div class="card-content">
-                                    <h3>Dynamic Fetch & API Integration</h3>
-                                    <p>
-                                        Connecting frontend markup to external data sources using JavaScript Fetch API,
-                                        handling asynchronous JSON promises, and rendering dynamic cards.
-                                    </p>
-                                    <ul class="tech-tags">
-                                        <li>JavaScript ES6</li>
-                                        <li>Fetch API</li>
-                                        <li>Async/Await</li>
-                                    </ul>
-                                    <div class="card-actions">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
-                                    </div>
+                                <div class="placeholder-graphic">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="card-content placeholder-content">
+                                    <h3>Lab Activity 05</h3>
+                                    <p>Activity documentation and source code are currently in progress.</p>
+                                    <span class="status-badge">Coming Soon</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
                 <!-- LAB ACTIVITY 6 -->
                 <article class="activity-card folder-card" id="lab-6" tabindex="0" aria-label="Lab 6 Folder">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
                         <span class="folder-tab-label">LAB 06</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
                         <div class="folder-sheet-wrapper">
-                            <img class="paper-bg-layer" src="opened-paper2.png" alt="" draggable="false">
-                            <div class="folder-sheet">
+                            <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
+                            <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 06</div>
-                                <figure class="card-preview">
-                                    <img src="images/lab6-preview.png" alt="Preview of Lab Activity 6">
-                                    <figcaption>Lab 6 Preview</figcaption>
-                                </figure>
-                                <div class="card-content">
-                                    <h3>Responsive Mini Web Project</h3>
-                                    <p>
-                                        Capstone laboratory exercise integrating semantic HTML5, responsive CSS,
-                                        and interactive JavaScript into a comprehensive multi-section web application.
-                                    </p>
-                                    <ul class="tech-tags">
-                                        <li>HTML5</li>
-                                        <li>CSS3</li>
-                                        <li>Responsive</li>
-                                    </ul>
-                                    <div class="card-actions">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Live Demo</a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Source Code</a>
-                                    </div>
+                                <div class="placeholder-graphic">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="card-content placeholder-content">
+                                    <h3>Lab Activity 06</h3>
+                                    <p>Activity documentation and source code are currently in progress.</p>
+                                    <span class="status-badge">Coming Soon</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
