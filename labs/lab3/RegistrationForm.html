@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body style="margin: 0;">
+    <div style="background-color: aqua; padding: 10px;">
+        <header align="center">
+            <h1>Student Personal Website</h1>
+        </header>
+    </div>
+    <div style="background-color: bisque; display:flex; justify-content:center; gap: 20px; padding: 10px;">
+        <nav style="display:flex; gap: 20px">
+            <a href="Home.html">Home</a>
+            <a href="RegistrationForm.html">Registration Form</a>
+            <a href="GradeTable.html">Grades Table</a>
+            <a href="MyProfile.html">Profile</a>
+        </nav>
+    </div>
+
+    <div style="padding: 20px;">
+        <!-- Student Name -->
+        <form action="type">Student Name <br>
+            <input type="text">
+        </form><br>
+        
+        <!-- Student Number -->
+        <form action="type">Student Number <br>
+            <input type="text">
+        </form><br>
+
+        <!-- Student Email -->
+        <form action="type">Student Email <br>
+            <input type="email">
+        </form><br>
+
+        <!-- Student Gender -->
+        <form action="radio">Gender <br>
+            <input type="radio" name="Gender" value="Male">Male
+            <input type="radio" name="Gender" value="Female">Female
+        </form><br>
+
+        <!-- Student Course -->
+        <form action="select">Course <br>
+            <select name="dropdown">
+                <option value="BSIT"selected>BSIT</option>
+                <option value="BSCS"selected>BSCS</option>
+                <option value="BSTM"selected>BSTM</option>
+                <option value="BSHM"selected>BSHM</option>
+                <option value="BSOAD"selected>BSOAD</option>
+                <option value="BCED"selected>BCED</option>
+            </select>
+            <!-- <input type="radio" name="Gender" value="Male">Male
+            <input type="radio" name="Gender" value="Female">Female -->
+        </form><br>
+
+        <!-- Student Skills -->
+        <form action="checkbox">Skills <br>
+            <input type="checkbox" name="HTML" value="on">HTML
+            <input type="checkbox" name="CSS" value="on">CSS
+            <input type="checkbox" name="JS" value="on">JavaScript
+        </form><br>
+
+        <!-- Upload Picture -->
+        <form action="Upload File">Upload Picture <br>
+            <input type="file" name="fileupload" accept="image/*"/>
+        </form><br>
+
+        <!-- Student Address -->
+        <form>
+            Address: <br>
+            <textarea name="Address" id="Enter description here" cols="30" rows="10"></textarea>
+        </form><br>
+        <form action="">
+            <input type="submit" name="submit" value="Submit"/>
+            <input type="reset" name="reset" value="Reset"/>
+        </form>
+    </div>
+
+    <Footer style="background-color: beige; justify-content:center; padding: 100px;" align="center">
+        <p>Copyright @2026</p>
+    </Footer>
+</body>
+</html>
