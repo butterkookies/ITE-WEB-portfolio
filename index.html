@@ -7,6 +7,10 @@
     <meta name="description"
         content="Portfolio showcasing IT31 Web Systems and Technologies laboratory activities, projects, and skills.">
     <title>Andrei | Web Systems & Technologies Portfolio</title>
+    <!-- Comic Book & Modern Editorial Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,7 +24,7 @@
     <header id="top">
         <nav aria-label="Main Navigation">
             <!-- Brand / Logo Link -->
-            <a href="#home" class="brand-logo">Andrei.dev</a>
+            <a href="#home" class="brand-logo">Andrei<span class="logo-accent">.dev</span></a>
 
             <!-- On-Page Navigation Links -->
             <ul>
@@ -45,21 +49,40 @@
              - Initial impression, introducing the student and field of study.
              ====================================================================== -->
         <section id="home">
-            <div class="hero-avatar-wrapper">
-                <img src="images/profile.png" alt="Andrei - Profile Picture" class="hero-avatar" width="130" height="130">
+            <!-- Hero Showcase: Matte Royal Blue Backdrop with Soft White Lighting & Floating Realistic Polaroid -->
+            <div class="hero-polaroid-stage">
+                <div class="matte-blue-backdrop">
+                    <div class="soft-lighting-spot"></div>
+                    <div class="polaroid-wrapper">
+                        <div class="polaroid-card">
+                            <div class="polaroid-photo-frame">
+                                <img src="images/profile.png" alt="Andrei - Profile Picture" class="hero-avatar" width="180" height="180">
+                            </div>
+                            <div class="polaroid-chin">
+                                <span class="polaroid-caption">Andrei // 2026</span>
+                                <span class="polaroid-badge">IT31</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="section-tagline">Hello & Welcome, I'm</p>
-            <h1>Andrei</h1>
-            <h2>3rd Year BS Information Technology Student</h2>
-            <p>
-                Specializing in Web Systems and Technologies (IT31). Passionate about crafting
-                clean, accessible, and responsive user interfaces using foundational web technologies.
-            </p>
 
-            <!-- Quick Action Links (Jumps within the same page) -->
-            <div class="hero-actions">
-                <a href="#activities" class="btn btn-primary">View Lab Activities</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            <div class="hero-content">
+                <div class="hero-tagline-wrapper">
+                    <span class="section-tagline">Issue #01 • Developer Origin</span>
+                </div>
+                <h1>Andrei</h1>
+                <h2>3rd Year BS Information Technology Student</h2>
+                <p>
+                    Specializing in Web Systems and Technologies (IT31). Passionate about crafting
+                    clean, accessible, and responsive user interfaces using foundational web technologies.
+                </p>
+
+                <!-- Quick Action Links (Jumps within the same page) -->
+                <div class="hero-actions">
+                    <a href="#activities" class="btn btn-primary">View Lab Activities</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
             </div>
         </section>
 
@@ -588,6 +611,9 @@
             }
         });
     </script>
+
+    <!-- Interactive Dot Matrix Cat Mascot -->
+    <script src="mascot.js"></script>
 
 </body>
 

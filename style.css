@@ -1,137 +1,502 @@
 /* ==========================================================================
-   BASIC VISUALIZATION STYLESHEET
-   Purpose: Component separation and layout visualization.
-   Includes ONLY:
-   - display: flex (flex-direction, flex-wrap, justify-content, align-items, gap)
-   - Spacing (margin, padding)
-   - Alignment (text-align, justify-content, align-items)
-   - Color (background-color, color, border)
+   ANDREI // WEB SYSTEMS & TECHNOLOGIES PORTFOLIO (IT31)
+   Brand Identity:
+   - Primary Accent: Royal Blue (#1d4ed8, #1e40af, #2563eb)
+   - Base Palette: Dirty White paper (#f6f3eb, #faf8f3, #ffffff)
+   - Typography: Black & White interchangeable comic theme (#111827 ink black & #ffffff)
+   - Layout: Graphic Novel / Comic Paper Panels with ink borders & offset shadows
+   - Hero Showcase: Floating Realistic Polaroid with shadow on Matte Royal Blue with Soft White Lighting
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Document Defaults & Page Colors
+   Design Tokens / Variables
    -------------------------------------------------------------------------- */
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+    --royal-blue: #1d4ed8;
+    --royal-blue-hover: #2563eb;
+    --royal-blue-dark: #1e3a8a;
+    --royal-blue-tint: #eff6ff;
+    --royal-blue-subtle: #dbeafe;
+
+    --dirty-white: #f6f3eb;
+    --dirty-white-panel: #faf8f3;
+    --pure-white: #ffffff;
+
+    --ink-black: #111827;
+    --ink-charcoal: #1f2937;
+    --ink-muted: #4b5563;
+    --ink-light: #9ca3af;
+
+    --border-ink: 2.5px solid #111827;
+    --border-ink-thin: 2px solid #111827;
+    --border-ink-subtle: 1.5px solid #111827;
+
+    --comic-shadow: 5px 5px 0px #111827;
+    --comic-shadow-lg: 7px 7px 0px #111827;
+    --comic-shadow-sm: 3px 3px 0px #111827;
+    --comic-shadow-blue: 5px 5px 0px #1d4ed8;
+}
+
+/* --------------------------------------------------------------------------
+   Document Defaults & Page Colors (Dirty White Comic Paper)
+   -------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #f8fafc;
-    color: #1e293b;
+    background-color: var(--dirty-white);
+    /* Subtle comic newsprint halftone / paper grain */
+    background-image: radial-gradient(#dcd5c7 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+    color: var(--ink-black);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* --------------------------------------------------------------------------
    Header & Navigation
    -------------------------------------------------------------------------- */
-header {
-    background-color: #e2e8f0;
-    padding: 15px 30px;
-    border-bottom: 2px solid #cbd5e1;
+header#top {
+    background-color: var(--dirty-white-panel);
+    padding: 16px 36px;
+    border-bottom: 3px solid var(--ink-black);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--ink-black);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.brand-logo .logo-accent {
+    background-color: var(--royal-blue);
+    color: var(--pure-white);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: var(--border-ink-subtle);
+    box-shadow: 2px 2px 0px var(--ink-black);
+    font-size: 0.95rem;
+    letter-spacing: 0;
 }
 
 nav ul {
     display: flex;
-    gap: 20px;
+    gap: 12px;
     margin: 0;
     padding: 0;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--ink-black);
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1.5px solid transparent;
+    transition: all 0.18s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--royal-blue);
+    color: var(--pure-white);
+    border-color: var(--ink-black);
+    box-shadow: 2px 2px 0px var(--ink-black);
 }
 
 /* --------------------------------------------------------------------------
-   Base Section Spacing & Structure
+   Base Section Spacing & Comic Panel Structure
    -------------------------------------------------------------------------- */
 section {
-    padding: 40px 30px;
-    margin-bottom: 12px;
+    background-color: var(--dirty-white-panel);
+    border: var(--border-ink);
+    box-shadow: var(--comic-shadow);
+    border-radius: 14px;
+    max-width: 1200px;
+    margin: 0 auto 32px auto;
+    padding: 44px 36px;
+    position: relative;
+}
+
+/* Interchangeable Black & White Comic Title Badge */
+section h2 {
+    display: inline-block;
+    background: var(--ink-black);
+    color: var(--pure-white);
+    padding: 8px 22px;
+    border-radius: 6px;
+    border: var(--border-ink-thin);
+    box-shadow: var(--comic-shadow-blue);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 10px 0;
+}
+
+.section-subtitle {
+    color: var(--ink-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 28px 0;
 }
 
 /* --------------------------------------------------------------------------
-   Hero / Intro Section (#home) - Amber / Yellow tint
+   Buttons (Comic Tactile Style)
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: var(--border-ink-thin);
+    box-shadow: var(--comic-shadow-sm);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-primary {
+    background-color: var(--royal-blue);
+    color: var(--pure-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--royal-blue-hover);
+    transform: translate(-2px, -2px);
+    box-shadow: var(--comic-shadow);
+}
+
+.btn-primary:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--ink-black);
+}
+
+.btn-secondary {
+    background-color: var(--pure-white);
+    color: var(--ink-black);
+}
+
+.btn-secondary:hover {
+    background-color: #f3f4f6;
+    transform: translate(-2px, -2px);
+    box-shadow: var(--comic-shadow);
+}
+
+.btn-secondary:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--ink-black);
+}
+
+/* --------------------------------------------------------------------------
+   Hero / Intro Section (#home)
+   Features:
+   - Matte Finish Royal Blue backdrop with Soft White Lighting
+   - Floating Realistic Polaroid with Multi-Layer Cast Shadow
    -------------------------------------------------------------------------- */
 #home {
-    background-color: #fef3c7;
-    border: 2px solid #fde68a;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    text-align: left;
+    flex-wrap: wrap;
+    padding: 50px 44px;
+    margin-top: 24px;
 }
 
-/* Hero Avatar */
-.hero-avatar-wrapper {
-    margin: 0 auto 18px auto;
-    width: 130px;
-    height: 130px;
-}
-
-.hero-avatar {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #ffffff;
-    box-shadow: 0 8px 24px rgba(184, 138, 88, 0.25), 0 2px 6px rgba(0, 0, 0, 0.08);
-    display: block;
+/* 1. Hero Showcase Stage */
+.hero-polaroid-stage {
+    flex: 0 0 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
     margin: 0 auto;
+}
+
+/* 2. Matte Finish Royal Blue Backdrop with Soft White Lighting */
+.matte-blue-backdrop {
+    position: relative;
+    width: 310px;
+    height: 355px;
+    border-radius: 18px;
+    /* Matte Royal Blue with Soft Diffused Top Lighting */
+    background: radial-gradient(ellipse at 50% 12%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.14) 48%, rgba(255, 255, 255, 0) 75%), #1d4ed8;
+    border: var(--border-ink);
+    box-shadow: var(--comic-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Soft white lighting bloom overlay */
+.soft-lighting-spot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    background: radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 3. Floating Realistic Polaroid Animation */
+.polaroid-wrapper {
+    position: relative;
+    z-index: 2;
+    animation: polaroidFloat 5.5s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+@keyframes polaroidFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(-2.5deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(-1deg);
+    }
+}
+
+/* Realistic Polaroid Photo Card */
+.polaroid-card {
+    position: relative;
+    background-color: #fdfbf7;
+    padding: 12px 12px 28px 12px;
+    border-radius: 4px;
+    border: var(--border-ink-thin);
+    /* Multi-layered photographic shadow onto the matte blue backdrop */
+    box-shadow: 
+        0 20px 38px -5px rgba(0, 0, 0, 0.55),
+        0 10px 18px -3px rgba(17, 24, 39, 0.4),
+        3px 3px 0px var(--ink-black);
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero-avatar:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 28px rgba(184, 138, 88, 0.35), 0 4px 10px rgba(0, 0, 0, 0.12);
+.polaroid-card:hover {
+    transform: scale(1.03) rotate(0deg);
+    box-shadow: 
+        0 28px 48px -5px rgba(0, 0, 0, 0.65),
+        0 14px 24px -3px rgba(17, 24, 39, 0.45),
+        4px 4px 0px var(--ink-black);
+}
+
+/* Inner Photo Frame */
+.polaroid-photo-frame {
+    width: 185px;
+    height: 185px;
+    overflow: hidden;
+    border: 1.5px solid var(--ink-black);
+    background-color: var(--ink-black);
+}
+
+.polaroid-photo-frame img.hero-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Polaroid Bottom Chin with Caption */
+.polaroid-chin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--ink-black);
+}
+
+.polaroid-caption {
+    letter-spacing: 0.5px;
+}
+
+.polaroid-badge {
+    background-color: var(--royal-blue);
+    color: var(--pure-white);
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid var(--ink-black);
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+/* Hero Content Column */
+.hero-content {
+    flex: 1 1 420px;
+}
+
+.hero-tagline-wrapper {
+    margin-bottom: 12px;
+}
+
+.section-tagline {
+    display: inline-block;
+    background-color: var(--ink-black);
+    color: var(--pure-white);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 2px 2px 0px var(--royal-blue);
+}
+
+.hero-content h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3.4rem;
+    font-weight: 900;
+    color: var(--ink-black);
+    line-height: 1.05;
+    margin: 0 0 8px 0;
+    letter-spacing: -1.2px;
+}
+
+.hero-content h2 {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    color: var(--royal-blue);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+    text-transform: none;
+    letter-spacing: -0.3px;
+}
+
+.hero-content p {
+    color: var(--ink-charcoal);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0 0 26px 0;
 }
 
 .hero-actions {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 /* --------------------------------------------------------------------------
-   About Me Section (#about) - Green tint
+   About Me Section (#about) - Comic Panel Layout
    -------------------------------------------------------------------------- */
 #about {
-    background-color: #dcfce7;
-    border: 2px solid #bbf7d0;
+    border-top: 5px solid var(--royal-blue);
 }
 
 .about-content {
     display: flex;
-    gap: 30px;
-    align-items: flex-start;
+    gap: 28px;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .about-text {
-    flex: 2;
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #86efac;
+    flex: 2 1 360px;
+    background-color: var(--pure-white);
+    padding: 26px;
+    border: var(--border-ink-thin);
+    box-shadow: var(--comic-shadow-sm);
+    border-radius: 10px;
+}
+
+.about-text p {
+    margin: 0 0 16px 0;
+    color: var(--ink-charcoal);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
 }
 
 .about-highlights {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #86efac;
+    flex: 1 1 280px;
+    background-color: var(--pure-white);
+    padding: 26px;
+    border: var(--border-ink-thin);
+    border-top: 6px solid var(--royal-blue);
+    box-shadow: var(--comic-shadow-sm);
+    border-radius: 10px;
+}
+
+.about-highlights ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-highlights li {
+    font-size: 0.92rem;
+    color: var(--ink-charcoal);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.45;
+}
+
+.about-highlights li::before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--royal-blue);
+    font-size: 0.85rem;
 }
 
 /* --------------------------------------------------------------------------
-   Skills Section (#skills) - Light Blue tint
+   Skills Section (#skills) - Tech Grid
    -------------------------------------------------------------------------- */
 #skills {
-    background-color: #e0f2fe;
-    border: 2px solid #bae6fd;
+    border-top: 5px solid var(--royal-blue);
 }
 
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 18px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -139,36 +504,36 @@ section {
 
 .skill-item {
     flex: 1 1 240px;
-    background-color: #ffffff;
-    padding: 18px 20px;
-    border: 1px solid #7dd3fc;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+    background-color: var(--pure-white);
+    padding: 20px 22px;
+    border: var(--border-ink-thin);
+    box-shadow: var(--comic-shadow-sm);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .skill-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.12);
+    transform: translate(-3px, -3px);
+    box-shadow: var(--comic-shadow-blue);
 }
 
 .skill-header {
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .skill-icon-wrapper {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
-    background-color: #f0f9ff;
-    border: 1px solid #bae6fd;
+    width: 46px;
+    height: 46px;
+    background-color: var(--royal-blue-tint);
+    border: 1.5px solid var(--royal-blue);
     border-radius: 8px;
     flex-shrink: 0;
     padding: 7px;
@@ -177,7 +542,7 @@ section {
 }
 
 .skill-item:hover .skill-icon-wrapper {
-    background-color: #e0f2fe;
+    background-color: var(--royal-blue-subtle);
 }
 
 .skill-icon-wrapper img.skill-icon {
@@ -200,31 +565,33 @@ section {
 
 .skill-header h3 {
     margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.15rem;
-    color: #0f172a;
-    font-weight: 700;
+    color: var(--ink-black);
+    font-weight: 800;
 }
 
 .skill-item p {
     margin: 0;
     font-size: 0.92rem;
     line-height: 1.5;
-    color: #475569;
+    color: var(--ink-muted);
 }
 
 /* --------------------------------------------------------------------------
-   Lab Activities Section (#activities) - Kraft Folder Theme (2x PNG Assets)
+   Lab Activities Section (#activities) - Kraft Folder Workshop
    -------------------------------------------------------------------------- */
 #activities {
-    background-color: #f5f0ea;
-    border: 2px solid #e3d9cd;
+    background-color: #f5f1e8;
+    border: var(--border-ink);
+    border-top: 5px solid var(--royal-blue);
     overflow: visible;
 }
 
 .activities-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 85px 30px; /* Vertical gap ensures sliding sheets have room when open */
+    gap: 85px 30px;
     justify-content: center;
     padding: 40px 10px 50px 10px;
 }
@@ -249,18 +616,15 @@ section {
 
 .activity-card.folder-card:focus-visible {
     border-radius: 16px;
-    box-shadow: 0 0 0 3px #b88a58;
+    box-shadow: 0 0 0 3px var(--royal-blue);
 }
 
 .folder-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
-    perspective: 900px;
-    transform-style: preserve-3d;
 }
 
-/* Common PNG layer styling */
 .folder-png {
     position: absolute;
     display: block;
@@ -269,7 +633,7 @@ section {
     pointer-events: none;
 }
 
-/* 1. Back Cover (Darker kraft with top tab) */
+/* 1. Back Cover */
 .folder-png.folder-back {
     top: 0;
     left: 50%;
@@ -280,13 +644,12 @@ section {
     z-index: 1;
 }
 
-/* Tab label positioned on the top-left tab */
 .folder-tab-label {
     position: absolute;
     top: 8px;
     left: calc(50% - 170px);
     z-index: 2;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 1px;
@@ -296,24 +659,21 @@ section {
     text-transform: uppercase;
 }
 
-/* 2. Sliding Paper Sheet Wrapper (Slightly seen in default look, slides up on hover) */
+/* 2. Sliding Paper Sheet Wrapper */
 .folder-sheet-wrapper {
     position: absolute;
     left: 50%;
-    bottom: 24px;
-    transform: translateX(-50%) translateY(0);
+    bottom: 20px;
+    transform: translateX(-50%) translateY(80px);
     width: 88%;
     max-width: 388px;
-    height: 260px;
+    height: 265px;
     z-index: 2;
-    opacity: 1;
+    opacity: 0;
     pointer-events: none;
-    /* Smooth physical slide-up physics */
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    will-change: transform;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
 }
 
-/* Offset background paper sheet (matches images/folder/opened-paper2.png in Figma) */
 .paper-bg-layer {
     position: absolute;
     top: -6px;
@@ -328,14 +688,14 @@ section {
     -webkit-user-drag: none;
 }
 
-/* Front white paper sheet with actual lab content */
 .folder-sheet {
     position: relative;
     z-index: 2;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: var(--pure-white);
     border-radius: 6px;
+    border: var(--border-ink-thin);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     padding: 14px 18px;
     box-sizing: border-box;
@@ -345,18 +705,19 @@ section {
 /* Sheet Tab Badge */
 .sheet-badge {
     display: inline-block;
-    background-color: #b88a58;
-    color: #ffffff;
+    background-color: var(--royal-blue);
+    color: var(--pure-white);
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 0.72rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     padding: 2px 8px;
     border-radius: 4px;
+    border: 1px solid var(--ink-black);
     margin-bottom: 6px;
 }
 
-/* Sheet Card Content */
 .folder-sheet .card-preview {
     background-color: #f8fafc;
     border: 1px dashed #cbd5e1;
@@ -378,14 +739,16 @@ section {
 
 .folder-sheet h3 {
     margin: 0 0 6px 0;
-    font-size: 0.98rem;
-    color: #1e293b;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    color: var(--ink-black);
+    font-weight: 800;
 }
 
 .folder-sheet p {
     font-size: 0.82rem;
     line-height: 1.4;
-    color: #475569;
+    color: var(--ink-muted);
     margin: 0 0 10px 0;
 }
 
@@ -399,12 +762,13 @@ section {
 }
 
 .folder-sheet .tech-tags li {
-    background-color: #f1f5f9;
-    color: #334155;
+    background-color: var(--dirty-white);
+    color: var(--ink-black);
     font-size: 0.7rem;
+    font-weight: 700;
     padding: 2px 7px;
     border-radius: 4px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--ink-black);
 }
 
 .folder-sheet .card-actions {
@@ -415,69 +779,60 @@ section {
 .folder-sheet .card-actions .btn {
     text-decoration: none;
     font-size: 0.76rem;
-    font-weight: 600;
+    font-weight: 700;
     padding: 5px 12px;
     border-radius: 6px;
     display: inline-block;
-    transition: background-color 0.2s, color 0.2s;
+    border: 1.5px solid var(--ink-black);
+    box-shadow: 2px 2px 0px var(--ink-black);
 }
 
 .folder-sheet .card-actions .btn:first-child {
-    background-color: #b88a58;
-    color: #ffffff;
+    background-color: var(--royal-blue);
+    color: var(--pure-white);
 }
 
 .folder-sheet .card-actions .btn:first-child:hover {
-    background-color: #9e6f3e;
+    background-color: var(--royal-blue-hover);
 }
 
 .folder-sheet .card-actions .btn:last-child {
-    background-color: #e2e8f0;
-    color: #334155;
+    background-color: var(--pure-white);
+    color: var(--ink-black);
 }
 
 .folder-sheet .card-actions .btn:last-child:hover {
-    background-color: #cbd5e1;
+    background-color: #f3f4f6;
 }
 
-/* 3. Front Pocket (Covers the front of the folder) */
+/* 3. Front Pocket */
 .folder-png.folder-front {
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%) rotateX(0deg);
-    transform-origin: bottom center;
-    z-index: 4;
-    pointer-events: none;
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
-    will-change: transform;
-}
-
-.folder-png.front-closed {
+    transform: translateX(-50%);
     width: 100%;
     max-width: 449px;
-    opacity: 1;
+    z-index: 4;
+    pointer-events: none;
+    transform-origin: bottom center;
+    transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.38s ease;
 }
 
 .folder-png.front-opened {
     display: none;
 }
 
-/* ==========================================================================
-   HOVER MORPH & INTERACTIVE FOLDER STATES
-   ========================================================================== */
-
-/* Hover: Paper sheet smoothly slides upward even more */
+/* Hover Morph */
 .activity-card.folder-card:hover .folder-sheet-wrapper {
     transform: translateX(-50%) translateY(-75px);
 }
 
-/* Hover: Front folder morphs/folds open forward in 3D (no fading) */
 .activity-card.folder-card:hover .folder-png.folder-front {
     transform: translateX(-50%) rotateX(-24deg);
     filter: drop-shadow(0 14px 18px rgba(67, 41, 20, 0.22));
 }
 
-/* Placeholder Sheet Styling */
+/* Placeholder Sheet */
 .folder-sheet.placeholder-sheet {
     display: flex;
     flex-direction: column;
@@ -488,8 +843,8 @@ section {
 }
 
 .placeholder-graphic {
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     background-color: #fef3c7;
     border: 2px dashed #b88a58;
@@ -514,19 +869,19 @@ section {
 
 .status-badge {
     display: inline-block;
-    background-color: #fef3c7;
-    color: #92400e;
+    background-color: var(--royal-blue-tint);
+    color: var(--royal-blue);
     font-size: 0.72rem;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     padding: 3px 10px;
     border-radius: 9999px;
-    border: 1px solid #fde68a;
+    border: 1px solid var(--royal-blue);
 }
 
 /* ==========================================================================
-   LAB PROJECT MODAL (Centered, Blurred Backdrop)
+   LAB PROJECT MODAL
    ========================================================================== */
 .lab-modal {
     position: fixed;
@@ -554,9 +909,9 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(15, 23, 42, 0.65);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .modal-window {
@@ -566,9 +921,10 @@ section {
     max-width: 960px;
     height: 85vh;
     max-height: 720px;
-    background-color: #ffffff;
+    background-color: var(--pure-white);
     border-radius: 12px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    border: 3px solid var(--ink-black);
+    box-shadow: 10px 10px 0px var(--ink-black);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -585,8 +941,8 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 14px 20px;
-    background-color: #f8fafc;
-    border-bottom: 1px solid #e2e8f0;
+    background-color: var(--dirty-white-panel);
+    border-bottom: 2px solid var(--ink-black);
 }
 
 .modal-title-group {
@@ -596,20 +952,24 @@ section {
 }
 
 .modal-badge {
-    background-color: #b88a58;
-    color: #ffffff;
+    background-color: var(--royal-blue);
+    color: var(--pure-white);
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 0.72rem;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     padding: 3px 8px;
     border-radius: 4px;
+    border: 1px solid var(--ink-black);
 }
 
 .modal-header h3 {
     margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.05rem;
-    color: #0f172a;
+    color: var(--ink-black);
+    font-weight: 800;
 }
 
 .modal-actions {
@@ -622,11 +982,12 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background-color: #fef3c7;
-    color: #92400e;
-    border: 1px solid #fde68a;
+    background-color: var(--royal-blue);
+    color: var(--pure-white);
+    border: 1.5px solid var(--ink-black);
+    box-shadow: 2px 2px 0px var(--ink-black);
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 700;
     padding: 6px 14px;
     border-radius: 6px;
     text-decoration: none;
@@ -634,7 +995,7 @@ section {
 }
 
 .btn-new-tab:hover {
-    background-color: #fde68a;
+    background-color: var(--royal-blue-hover);
     transform: translateY(-1px);
 }
 
@@ -644,10 +1005,10 @@ section {
 
 .modal-close-btn {
     background: none;
-    border: none;
+    border: 1.5px solid var(--ink-black);
     cursor: pointer;
-    padding: 6px;
-    color: #64748b;
+    padding: 5px;
+    color: var(--ink-black);
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -656,8 +1017,8 @@ section {
 }
 
 .modal-close-btn:hover {
-    background-color: #e2e8f0;
-    color: #0f172a;
+    background-color: var(--royal-blue);
+    color: var(--pure-white);
 }
 
 .modal-body {
@@ -674,71 +1035,194 @@ section {
 }
 
 /* --------------------------------------------------------------------------
-   Contact Section (#contact) - Rose / Pink tint
+   Contact Section (#contact) - Comic Panel Style
    -------------------------------------------------------------------------- */
 #contact {
-    background-color: #ffe4e6;
-    border: 2px solid #fecdd3;
+    border-top: 5px solid var(--royal-blue);
 }
 
 .contact-wrapper {
     display: flex;
-    gap: 30px;
+    gap: 28px;
+    flex-wrap: wrap;
 }
 
 .contact-info {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #fda4af;
+    flex: 1 1 300px;
+    background-color: var(--pure-white);
+    padding: 26px;
+    border: var(--border-ink-thin);
+    box-shadow: var(--comic-shadow-sm);
+    border-radius: 10px;
+}
+
+.contact-info h3 {
+    margin: 0 0 10px 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    color: var(--ink-black);
+    font-weight: 800;
+}
+
+.contact-info p {
+    color: var(--ink-muted);
+    font-size: 0.95rem;
+    margin: 0 0 18px 0;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-info li a {
+    color: var(--royal-blue);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-info li a:hover {
+    text-decoration: underline;
 }
 
 .contact-form-container {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #fda4af;
+    flex: 1 1 360px;
+    background-color: var(--pure-white);
+    padding: 26px;
+    border: var(--border-ink-thin);
+    box-shadow: var(--comic-shadow-sm);
+    border-radius: 10px;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
+}
+
+.form-group label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--ink-black);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 14px;
+    border: var(--border-ink-thin);
+    border-radius: 8px;
+    background-color: #faf8f5;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--ink-black);
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--royal-blue);
+    box-shadow: 3px 3px 0px var(--royal-blue);
+    background-color: var(--pure-white);
 }
 
 .form-actions {
     display: flex;
     justify-content: flex-start;
+    margin-top: 6px;
 }
 
 /* --------------------------------------------------------------------------
-   Footer - Dark Slate
+   Footer - Dark Graphic Panel
    -------------------------------------------------------------------------- */
 footer {
-    background-color: #334155;
-    color: #ffffff;
-    padding: 20px 30px;
+    background-color: var(--ink-black);
+    color: #f4f1ea;
+    padding: 28px 36px;
+    border-top: 3px solid var(--ink-black);
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #cbd5e1;
 }
 
 .footer-links {
     display: flex;
-    gap: 15px;
+    gap: 18px;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .footer-links a {
     color: #93c5fd;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--pure-white);
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .hero-polaroid-stage {
+        margin: 0 auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+
+    section {
+        margin: 0 16px 24px 16px;
+        padding: 32px 20px;
+    }
+
+    header#top {
+        padding: 14px 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 14px;
+    }
 }

@@ -4,23 +4,108 @@
   "graph": {},
   "nodes": [
     {
+      "label": "script.js",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L1",
+      "id": "script_js",
+      "community": 1,
+      "norm_label": "script.js"
+    },
+    {
+      "label": "button",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L1",
+      "id": "portfolio_script_button",
+      "community": 1,
+      "norm_label": "button"
+    },
+    {
+      "label": "message",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L2",
+      "id": "portfolio_script_message",
+      "community": 1,
+      "norm_label": "message"
+    },
+    {
+      "label": "colorInput",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L3",
+      "id": "portfolio_script_colorinput",
+      "community": 1,
+      "norm_label": "colorinput"
+    },
+    {
+      "label": "showMessage()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L6",
+      "id": "portfolio_script_showmessage",
+      "community": 1,
+      "norm_label": "showmessage()"
+    },
+    {
       "label": "Portfolio Index HTML",
       "file_type": "document",
       "source_file": "index.html",
-      "id": "portfolio_index",
       "community": 0,
-      "norm_label": "portfolio index html"
+      "norm_label": "portfolio index html",
+      "id": "portfolio_index"
     },
     {
       "label": "Portfolio Style CSS",
       "file_type": "document",
       "source_file": "style.css",
-      "id": "portfolio_style",
       "community": 0,
-      "norm_label": "portfolio style css"
+      "norm_label": "portfolio style css",
+      "id": "portfolio_style"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "script_js",
+      "target": "portfolio_script_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "script_js",
+      "target": "portfolio_script_message",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "script_js",
+      "target": "portfolio_script_colorinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "script_js",
+      "target": "portfolio_script_showmessage",
+      "confidence_score": 1.0
+    },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
@@ -30,5 +115,6 @@
       "target": "portfolio_style"
     }
   ],
-  "hyperedges": []
+  "hyperedges": [],
+  "built_at_commit": "f19a97b451611d0ea2e6c1f21b52bf90562a77a0"
 }
