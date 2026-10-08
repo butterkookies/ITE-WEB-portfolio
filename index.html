@@ -7,10 +7,10 @@
     <meta name="description"
         content="Portfolio showcasing IT31 Web Systems and Technologies laboratory activities, projects, and skills.">
     <title>Andrei | Web Systems & Technologies Portfolio</title>
-    <!-- Comic Book & Modern Editorial Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,7 +24,7 @@
     <header id="top">
         <nav aria-label="Main Navigation">
             <!-- Brand / Logo Link -->
-            <a href="#home" class="brand-logo">Andrei<span class="logo-accent">.dev</span></a>
+            <a href="#home" class="brand-logo">Andrei.dev</a>
 
             <!-- On-Page Navigation Links -->
             <ul>
@@ -49,28 +49,8 @@
              - Initial impression, introducing the student and field of study.
              ====================================================================== -->
         <section id="home">
-            <!-- Hero Showcase: Matte Royal Blue Backdrop with Soft White Lighting & Floating Realistic Polaroid -->
-            <div class="hero-polaroid-stage">
-                <div class="matte-blue-backdrop">
-                    <div class="soft-lighting-spot"></div>
-                    <div class="polaroid-wrapper">
-                        <div class="polaroid-card">
-                            <div class="polaroid-photo-frame">
-                                <img src="images/profile.png" alt="Andrei - Profile Picture" class="hero-avatar" width="180" height="180">
-                            </div>
-                            <div class="polaroid-chin">
-                                <span class="polaroid-caption">Andrei // 2026</span>
-                                <span class="polaroid-badge">IT31</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="hero-content">
-                <div class="hero-tagline-wrapper">
-                    <span class="section-tagline">Issue #01 • Developer Origin</span>
-                </div>
                 <h1>Andrei</h1>
                 <h2>3rd Year BS Information Technology Student</h2>
                 <p>
@@ -136,27 +116,18 @@
                 <!-- Core Web Technologies -->
                 <li class="skill-item">
                     <div class="skill-header">
-                        <div class="skill-icon-wrapper">
-                            <img src="icons/html5.svg" alt="HTML5 Logo" class="skill-icon">
-                        </div>
                         <h3>HTML5</h3>
                     </div>
                     <p>Semantic markup, document structure, forms, tables, and web accessibility (a11y).</p>
                 </li>
                 <li class="skill-item">
                     <div class="skill-header">
-                        <div class="skill-icon-wrapper">
-                            <img src="icons/css3.svg" alt="CSS3 Logo" class="skill-icon">
-                        </div>
                         <h3>CSS3</h3>
                     </div>
                     <p>Box model, Flexbox, CSS Grid, typography, media queries, and responsive design.</p>
                 </li>
                 <li class="skill-item">
                     <div class="skill-header">
-                        <div class="skill-icon-wrapper">
-                            <img src="icons/javascript.svg" alt="JavaScript Logo" class="skill-icon">
-                        </div>
                         <h3>JavaScript (ES6+)</h3>
                     </div>
                     <p>DOM manipulation, event handling, ES6 syntax, functions, and dynamic interactions.</p>
@@ -165,46 +136,30 @@
                 <!-- Developer Tools & Environment -->
                 <li class="skill-item">
                     <div class="skill-header">
-                        <div class="skill-icon-wrapper skill-icon-dual">
-                            <img src="icons/git.svg" alt="Git Logo" class="skill-icon">
-                            <img src="icons/github.svg" alt="GitHub Logo" class="skill-icon">
-                        </div>
                         <h3>Git & GitHub</h3>
                     </div>
                     <p>Version control, branch management, repositories, and project tracking.</p>
                 </li>
                 <li class="skill-item">
                     <div class="skill-header">
-                        <div class="skill-icon-wrapper">
-                            <img src="icons/vscode.svg" alt="VS Code Logo" class="skill-icon">
-                        </div>
                         <h3>VS Code</h3>
                     </div>
                     <p>Code editing, debugging, linting, extensions, and workflow productivity.</p>
                 </li>
                 <li class="skill-item">
                     <div class="skill-header">
-                        <div class="skill-icon-wrapper">
-                            <img src="icons/responsive.svg" alt="Responsive Web Design Icon" class="skill-icon">
-                        </div>
                         <h3>Responsive Web Design</h3>
                     </div>
                     <p>Mobile-first layouts, fluid grids, and cross-browser compatibility.</p>
                 </li>
                 <li class="skill-item">
                     <div class="skill-header">
-                        <div class="skill-icon-wrapper">
-                            <img src="icons/web-standards.svg" alt="Web Standards & SEO Icon" class="skill-icon">
-                        </div>
                         <h3>Web Standards & SEO</h3>
                     </div>
                     <p>Valid W3C markup, metadata configuration, clean URL routing, and basic SEO.</p>
                 </li>
                 <li class="skill-item">
                     <div class="skill-header">
-                        <div class="skill-icon-wrapper">
-                            <img src="icons/devtools.svg" alt="Browser Developer Tools Icon" class="skill-icon">
-                        </div>
                         <h3>Browser Developer Tools</h3>
                     </div>
                     <p>Inspecting elements, console debugging, network monitoring, and layout tuning.</p>
@@ -225,14 +180,18 @@
              ====================================================================== -->
         <section id="activities">
             <h2>Lab Activities</h2>
-            <p class="section-subtitle">Interactive archive of laboratory exercises and coursework for IT31 (Click any folder to open)</p>
+            <p class="section-subtitle">Interactive archive of laboratory exercises and coursework for IT31 (Click any
+                folder to open)</p>
 
             <div class="activities-grid">
 
                 <!-- LAB ACTIVITY 1 -->
-                <article class="activity-card folder-card" id="lab-1" tabindex="0" aria-label="Lab 1 Folder" data-lab-url="labs/lab1/index.html" data-lab-title="Lab Activity 01: Semantic HTML &amp; Bio Page" data-lab-badge="Lab 01">
+                <article class="activity-card folder-card" id="lab-1" tabindex="0" aria-label="Lab 1 Folder"
+                    data-lab-url="labs/lab1/index.html" data-lab-title="Lab Activity 01: Semantic HTML &amp; Bio Page"
+                    data-lab-badge="Lab 01">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back"
+                            draggable="false">
                         <span class="folder-tab-label">LAB 01</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
@@ -240,12 +199,6 @@
                             <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
                             <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 01</div>
-                                <div class="placeholder-graphic">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                </div>
                                 <div class="card-content placeholder-content">
                                     <h3>Lab Activity 01</h3>
                                     <p>Activity documentation and source code are currently in progress.</p>
@@ -255,15 +208,20 @@
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png"
+                            alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png"
+                            alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
                 <!-- LAB ACTIVITY 2 -->
-                <article class="activity-card folder-card" id="lab-2" tabindex="0" aria-label="Lab 2 Folder" data-lab-url="labs/lab2/index.html" data-lab-title="Lab Activity 02: Registration &amp; Survey Forms" data-lab-badge="Lab 02">
+                <article class="activity-card folder-card" id="lab-2" tabindex="0" aria-label="Lab 2 Folder"
+                    data-lab-url="labs/lab2/index.html"
+                    data-lab-title="Lab Activity 02: Registration &amp; Survey Forms" data-lab-badge="Lab 02">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back"
+                            draggable="false">
                         <span class="folder-tab-label">LAB 02</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
@@ -271,12 +229,6 @@
                             <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
                             <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 02</div>
-                                <div class="placeholder-graphic">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                </div>
                                 <div class="card-content placeholder-content">
                                     <h3>Lab Activity 02</h3>
                                     <p>Activity documentation and source code are currently in progress.</p>
@@ -286,15 +238,20 @@
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png"
+                            alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png"
+                            alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
                 <!-- LAB ACTIVITY 3 -->
-                <article class="activity-card folder-card" id="lab-3" tabindex="0" aria-label="Lab 3 Folder" data-lab-url="labs/lab3/Home.html" data-lab-title="Lab Activity 03: CSS Layouts: Flexbox &amp; Grid" data-lab-badge="Lab 03">
+                <article class="activity-card folder-card" id="lab-3" tabindex="0" aria-label="Lab 3 Folder"
+                    data-lab-url="labs/lab3/Home.html" data-lab-title="Lab Activity 03: CSS Layouts: Flexbox &amp; Grid"
+                    data-lab-badge="Lab 03">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back"
+                            draggable="false">
                         <span class="folder-tab-label">LAB 03</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
@@ -302,12 +259,6 @@
                             <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
                             <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 03</div>
-                                <div class="placeholder-graphic">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                </div>
                                 <div class="card-content placeholder-content">
                                     <h3>Lab Activity 03</h3>
                                     <p>Activity documentation and source code are currently in progress.</p>
@@ -317,15 +268,20 @@
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png"
+                            alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png"
+                            alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
                 <!-- LAB ACTIVITY 4 -->
-                <article class="activity-card folder-card" id="lab-4" tabindex="0" aria-label="Lab 4 Folder" data-lab-url="labs/lab4/index.html" data-lab-title="Lab Activity 04: Interactive DOM Manipulation" data-lab-badge="Lab 04">
+                <article class="activity-card folder-card" id="lab-4" tabindex="0" aria-label="Lab 4 Folder"
+                    data-lab-url="labs/lab4/index.html" data-lab-title="Lab Activity 04: Interactive DOM Manipulation"
+                    data-lab-badge="Lab 04">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back"
+                            draggable="false">
                         <span class="folder-tab-label">LAB 04</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
@@ -333,12 +289,6 @@
                             <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
                             <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 04</div>
-                                <div class="placeholder-graphic">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                </div>
                                 <div class="card-content placeholder-content">
                                     <h3>Lab Activity 04</h3>
                                     <p>Activity documentation and source code are currently in progress.</p>
@@ -348,15 +298,20 @@
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png"
+                            alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png"
+                            alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
                 <!-- LAB ACTIVITY 5 -->
-                <article class="activity-card folder-card" id="lab-5" tabindex="0" aria-label="Lab 5 Folder" data-lab-url="labs/lab5/index.html" data-lab-title="Lab Activity 05: Dynamic Fetch &amp; API Integration" data-lab-badge="Lab 05">
+                <article class="activity-card folder-card" id="lab-5" tabindex="0" aria-label="Lab 5 Folder"
+                    data-lab-url="labs/lab5/index.html"
+                    data-lab-title="Lab Activity 05: Dynamic Fetch &amp; API Integration" data-lab-badge="Lab 05">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back"
+                            draggable="false">
                         <span class="folder-tab-label">LAB 05</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
@@ -364,12 +319,6 @@
                             <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
                             <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 05</div>
-                                <div class="placeholder-graphic">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                </div>
                                 <div class="card-content placeholder-content">
                                     <h3>Lab Activity 05</h3>
                                     <p>Activity documentation and source code are currently in progress.</p>
@@ -379,15 +328,20 @@
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png"
+                            alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png"
+                            alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
                 <!-- LAB ACTIVITY 6 -->
-                <article class="activity-card folder-card" id="lab-6" tabindex="0" aria-label="Lab 6 Folder" data-lab-url="labs/lab6/index.html" data-lab-title="Lab Activity 06: Responsive Mini Web Project" data-lab-badge="Lab 06">
+                <article class="activity-card folder-card" id="lab-6" tabindex="0" aria-label="Lab 6 Folder"
+                    data-lab-url="labs/lab6/index.html" data-lab-title="Lab Activity 06: Responsive Mini Web Project"
+                    data-lab-badge="Lab 06">
                     <div class="folder-wrapper">
-                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back" draggable="false">
+                        <img class="folder-png folder-back" src="images/folder/closed-back.png" alt="Folder Back"
+                            draggable="false">
                         <span class="folder-tab-label">LAB 06</span>
 
                         <!-- Sliding Paper Sheet Wrapper -->
@@ -395,12 +349,6 @@
                             <img class="paper-bg-layer" src="images/folder/opened-paper2.png" alt="" draggable="false">
                             <div class="folder-sheet placeholder-sheet">
                                 <div class="sheet-badge">Lab 06</div>
-                                <div class="placeholder-graphic">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#b88a58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                </div>
                                 <div class="card-content placeholder-content">
                                     <h3>Lab Activity 06</h3>
                                     <p>Activity documentation and source code are currently in progress.</p>
@@ -410,8 +358,10 @@
                         </div>
 
                         <!-- Front Pocket PNGs -->
-                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png" alt="Folder Front Closed" draggable="false">
-                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png" alt="Folder Front Opened" draggable="false">
+                        <img class="folder-png folder-front front-closed" src="images/folder/closed-front.png"
+                            alt="Folder Front Closed" draggable="false">
+                        <img class="folder-png folder-front front-opened" src="images/folder/opened-front.png"
+                            alt="Folder Front Opened" draggable="false">
                     </div>
                 </article>
 
@@ -531,16 +481,19 @@
                     <h3 id="modal-title">Lab Activity Title</h3>
                 </div>
                 <div class="modal-actions">
-                    <a href="#" id="modal-new-tab-btn" target="_blank" rel="noopener noreferrer" class="btn-new-tab" title="Open project in new tab">
+                    <a href="#" id="modal-new-tab-btn" target="_blank" rel="noopener noreferrer" class="btn-new-tab"
+                        title="Open project in new tab">
                         <span>Open in New Tab</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                             <polyline points="15 3 21 3 21 9"></polyline>
                             <line x1="10" y1="14" x2="21" y2="3"></line>
                         </svg>
                     </a>
                     <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
@@ -610,10 +563,32 @@
                 closeLabModal();
             }
         });
-    </script>
+        // Highlight nav link of the section currently in view
+        const navLinks = document.querySelectorAll('header nav ul a');
+        const spy = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+                }
+            });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        document.querySelectorAll('main > section[id]').forEach(s => spy.observe(s));
 
-    <!-- Interactive Dot Matrix Cat Mascot -->
-    <script src="mascot.js"></script>
+        // Reliable in-page anchor scrolling (offset for sticky header)
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const id = link.getAttribute('href');
+                if (id.length < 2) return;
+                const target = document.querySelector(id);
+                if (!target) return;
+                e.preventDefault();
+                const header = document.getElementById('top');
+                const offset = id === '#top' ? 0 : header.offsetHeight + 8;
+                window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+                history.replaceState(null, '', id);
+            });
+        });
+    </script>
 
 </body>
 

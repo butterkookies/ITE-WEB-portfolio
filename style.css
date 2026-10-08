@@ -1,69 +1,39 @@
 /* ==========================================================================
    ANDREI // WEB SYSTEMS & TECHNOLOGIES PORTFOLIO (IT31)
-   Brand Identity:
-   - Primary Accent: Royal Blue (#1d4ed8, #1e40af, #2563eb)
-   - Base Palette: Dirty White paper (#f6f3eb, #faf8f3, #ffffff)
-   - Typography: Black & White interchangeable comic theme (#111827 ink black & #ffffff)
-   - Layout: Graphic Novel / Comic Paper Panels with ink borders & offset shadows
-   - Hero Showcase: Floating Realistic Polaroid with shadow on Matte Royal Blue with Soft White Lighting
+   Plain minimalist design: off-white dominant, near-black text, hairline borders.
+   The folder graphics in the Lab Activities section are the only imagery kept.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   Design Tokens / Variables
-   -------------------------------------------------------------------------- */
 :root {
-    --royal-blue: #1d4ed8;
-    --royal-blue-hover: #2563eb;
-    --royal-blue-dark: #1e3a8a;
-    --royal-blue-tint: #eff6ff;
-    --royal-blue-subtle: #dbeafe;
-
-    --dirty-white: #f6f3eb;
-    --dirty-white-panel: #faf8f3;
-    --pure-white: #ffffff;
-
-    --ink-black: #111827;
-    --ink-charcoal: #1f2937;
-    --ink-muted: #4b5563;
-    --ink-light: #9ca3af;
-
-    --border-ink: 2.5px solid #111827;
-    --border-ink-thin: 2px solid #111827;
-    --border-ink-subtle: 1.5px solid #111827;
-
-    --comic-shadow: 5px 5px 0px #111827;
-    --comic-shadow-lg: 7px 7px 0px #111827;
-    --comic-shadow-sm: 3px 3px 0px #111827;
-    --comic-shadow-blue: 5px 5px 0px #1d4ed8;
+    --bg: #f5f2ec;
+    --bg-soft: #efebe3;
+    --line: #dcd6ca;
+    --ink: #1c1b19;
+    --ink-muted: #6b675f;
 }
 
-/* --------------------------------------------------------------------------
-   Document Defaults & Page Colors (Dirty White Comic Paper)
-   -------------------------------------------------------------------------- */
 * {
     box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    padding: 0;
-    background-color: var(--dirty-white);
-    /* Subtle comic newsprint halftone / paper grain */
-    background-image: radial-gradient(#dcd5c7 1.2px, transparent 1.2px);
-    background-size: 22px 22px;
-    color: var(--ink-black);
-    line-height: 1.6;
+    background-color: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
     overflow-x: hidden;
 }
 
-/* --------------------------------------------------------------------------
-   Header & Navigation
-   -------------------------------------------------------------------------- */
+/* Header & Navigation */
 header#top {
-    background-color: var(--dirty-white-panel);
-    padding: 16px 36px;
-    border-bottom: 3px solid var(--ink-black);
+    background-color: var(--bg);
+    padding: 20px 36px;
+    border-bottom: 1px solid var(--line);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -73,391 +43,157 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 .brand-logo {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--ink-black);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
     text-decoration: none;
-    letter-spacing: -0.5px;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.brand-logo .logo-accent {
-    background-color: var(--royal-blue);
-    color: var(--pure-white);
-    padding: 2px 8px;
-    border-radius: 4px;
-    border: var(--border-ink-subtle);
-    box-shadow: 2px 2px 0px var(--ink-black);
-    font-size: 0.95rem;
-    letter-spacing: 0;
+    letter-spacing: -0.2px;
 }
 
 nav ul {
     display: flex;
-    gap: 12px;
+    gap: 28px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 nav ul li a {
-    color: var(--ink-black);
-    font-weight: 700;
-    font-size: 0.92rem;
+    color: var(--ink-muted);
+    font-size: 0.9rem;
     text-decoration: none;
-    padding: 7px 14px;
-    border-radius: 6px;
-    border: 1.5px solid transparent;
-    transition: all 0.18s ease;
+    transition: color 0.2s ease;
 }
 
-nav ul li a:hover {
-    background-color: var(--royal-blue);
-    color: var(--pure-white);
-    border-color: var(--ink-black);
-    box-shadow: 2px 2px 0px var(--ink-black);
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--ink);
 }
 
-/* --------------------------------------------------------------------------
-   Base Section Spacing & Comic Panel Structure
-   -------------------------------------------------------------------------- */
+nav ul li a.active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* Sections */
 section {
-    background-color: var(--dirty-white-panel);
-    border: var(--border-ink);
-    box-shadow: var(--comic-shadow);
-    border-radius: 14px;
-    max-width: 1200px;
-    margin: 0 auto 32px auto;
-    padding: 44px 36px;
-    position: relative;
+    scroll-margin-top: 70px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 36px;
+    border-bottom: 1px solid var(--line);
 }
 
-/* Interchangeable Black & White Comic Title Badge */
 section h2 {
-    display: inline-block;
-    background: var(--ink-black);
-    color: var(--pure-white);
-    padding: 8px 22px;
-    border-radius: 6px;
-    border: var(--border-ink-thin);
-    box-shadow: var(--comic-shadow-blue);
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.45rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    margin: 0 0 8px 0;
 }
 
 .section-subtitle {
     color: var(--ink-muted);
     font-size: 0.95rem;
-    font-weight: 600;
-    margin: 0 0 28px 0;
+    margin: 0 0 36px 0;
 }
 
-/* --------------------------------------------------------------------------
-   Buttons (Comic Tactile Style)
-   -------------------------------------------------------------------------- */
+/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 0.92rem;
+    font-weight: 500;
+    font-size: 0.9rem;
     text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    border: var(--border-ink-thin);
-    box-shadow: var(--comic-shadow-sm);
+    padding: 11px 22px;
+    border-radius: 4px;
+    border: 1px solid var(--ink);
     cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .btn-primary {
-    background-color: var(--royal-blue);
-    color: var(--pure-white);
+    background-color: var(--ink);
+    color: var(--bg);
 }
 
 .btn-primary:hover {
-    background-color: var(--royal-blue-hover);
-    transform: translate(-2px, -2px);
-    box-shadow: var(--comic-shadow);
-}
-
-.btn-primary:active {
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0px var(--ink-black);
+    background-color: transparent;
+    color: var(--ink);
 }
 
 .btn-secondary {
-    background-color: var(--pure-white);
-    color: var(--ink-black);
+    background-color: transparent;
+    color: var(--ink);
 }
 
 .btn-secondary:hover {
-    background-color: #f3f4f6;
-    transform: translate(-2px, -2px);
-    box-shadow: var(--comic-shadow);
+    background-color: var(--ink);
+    color: var(--bg);
 }
 
-.btn-secondary:active {
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0px var(--ink-black);
-}
-
-/* --------------------------------------------------------------------------
-   Hero / Intro Section (#home)
-   Features:
-   - Matte Finish Royal Blue backdrop with Soft White Lighting
-   - Floating Realistic Polaroid with Multi-Layer Cast Shadow
-   -------------------------------------------------------------------------- */
+/* Hero */
 #home {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 48px;
-    text-align: left;
-    flex-wrap: wrap;
-    padding: 50px 44px;
-    margin-top: 24px;
+    padding: 120px 36px 100px 36px;
 }
 
-/* 1. Hero Showcase Stage */
-.hero-polaroid-stage {
-    flex: 0 0 320px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1200px;
-    margin: 0 auto;
-}
-
-/* 2. Matte Finish Royal Blue Backdrop with Soft White Lighting */
-.matte-blue-backdrop {
-    position: relative;
-    width: 310px;
-    height: 355px;
-    border-radius: 18px;
-    /* Matte Royal Blue with Soft Diffused Top Lighting */
-    background: radial-gradient(ellipse at 50% 12%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.14) 48%, rgba(255, 255, 255, 0) 75%), #1d4ed8;
-    border: var(--border-ink);
-    box-shadow: var(--comic-shadow);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-/* Soft white lighting bloom overlay */
-.soft-lighting-spot {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 180px;
-    background: radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 70%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* 3. Floating Realistic Polaroid Animation */
-.polaroid-wrapper {
-    position: relative;
-    z-index: 2;
-    animation: polaroidFloat 5.5s ease-in-out infinite;
-    transform-origin: center center;
-}
-
-@keyframes polaroidFloat {
-    0%, 100% {
-        transform: translateY(0px) rotate(-2.5deg);
-    }
-    50% {
-        transform: translateY(-9px) rotate(-1deg);
-    }
-}
-
-/* Realistic Polaroid Photo Card */
-.polaroid-card {
-    position: relative;
-    background-color: #fdfbf7;
-    padding: 12px 12px 28px 12px;
-    border-radius: 4px;
-    border: var(--border-ink-thin);
-    /* Multi-layered photographic shadow onto the matte blue backdrop */
-    box-shadow: 
-        0 20px 38px -5px rgba(0, 0, 0, 0.55),
-        0 10px 18px -3px rgba(17, 24, 39, 0.4),
-        3px 3px 0px var(--ink-black);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.polaroid-card:hover {
-    transform: scale(1.03) rotate(0deg);
-    box-shadow: 
-        0 28px 48px -5px rgba(0, 0, 0, 0.65),
-        0 14px 24px -3px rgba(17, 24, 39, 0.45),
-        4px 4px 0px var(--ink-black);
-}
-
-/* Inner Photo Frame */
-.polaroid-photo-frame {
-    width: 185px;
-    height: 185px;
-    overflow: hidden;
-    border: 1.5px solid var(--ink-black);
-    background-color: var(--ink-black);
-}
-
-.polaroid-photo-frame img.hero-avatar {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-/* Polaroid Bottom Chin with Caption */
-.polaroid-chin {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    font-family: 'Space Grotesk', monospace;
-    font-size: 0.78rem;
-    font-weight: 800;
-    color: var(--ink-black);
-}
-
-.polaroid-caption {
-    letter-spacing: 0.5px;
-}
-
-.polaroid-badge {
-    background-color: var(--royal-blue);
-    color: var(--pure-white);
-    padding: 2px 6px;
-    border-radius: 3px;
-    border: 1px solid var(--ink-black);
-    font-size: 0.7rem;
-    font-weight: 800;
-}
-
-/* Hero Content Column */
 .hero-content {
-    flex: 1 1 420px;
-}
-
-.hero-tagline-wrapper {
-    margin-bottom: 12px;
-}
-
-.section-tagline {
-    display: inline-block;
-    background-color: var(--ink-black);
-    color: var(--pure-white);
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    box-shadow: 2px 2px 0px var(--royal-blue);
+    max-width: 640px;
 }
 
 .hero-content h1 {
-    font-family: 'Space Grotesk', sans-serif;
     font-size: 3.4rem;
-    font-weight: 900;
-    color: var(--ink-black);
+    font-weight: 600;
     line-height: 1.05;
-    margin: 0 0 8px 0;
-    letter-spacing: -1.2px;
+    letter-spacing: -1.5px;
+    margin: 0 0 12px 0;
 }
 
 .hero-content h2 {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    color: var(--royal-blue);
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.35rem;
-    font-weight: 800;
-    margin: 0 0 16px 0;
-    text-transform: none;
-    letter-spacing: -0.3px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    letter-spacing: 0;
+    margin: 0 0 20px 0;
 }
 
 .hero-content p {
-    color: var(--ink-charcoal);
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin: 0 0 26px 0;
+    color: var(--ink-muted);
+    font-size: 1.02rem;
+    margin: 0 0 32px 0;
 }
 
 .hero-actions {
     display: flex;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
-/* --------------------------------------------------------------------------
-   About Me Section (#about) - Comic Panel Layout
-   -------------------------------------------------------------------------- */
-#about {
-    border-top: 5px solid var(--royal-blue);
-}
-
+/* About */
 .about-content {
     display: flex;
-    gap: 28px;
-    align-items: stretch;
+    gap: 56px;
     flex-wrap: wrap;
 }
 
 .about-text {
     flex: 2 1 360px;
-    background-color: var(--pure-white);
-    padding: 26px;
-    border: var(--border-ink-thin);
-    box-shadow: var(--comic-shadow-sm);
-    border-radius: 10px;
 }
 
 .about-text p {
     margin: 0 0 16px 0;
-    color: var(--ink-charcoal);
-    font-size: 0.98rem;
-    line-height: 1.65;
-}
-
-.about-text p:last-child {
-    margin-bottom: 0;
+    color: var(--ink-muted);
 }
 
 .about-highlights {
     flex: 1 1 280px;
-    background-color: var(--pure-white);
-    padding: 26px;
-    border: var(--border-ink-thin);
-    border-top: 6px solid var(--royal-blue);
-    box-shadow: var(--comic-shadow-sm);
-    border-radius: 10px;
+    border-left: 1px solid var(--line);
+    padding-left: 28px;
 }
 
 .about-highlights ul {
@@ -471,120 +207,48 @@ section h2 {
 
 .about-highlights li {
     font-size: 0.92rem;
-    color: var(--ink-charcoal);
-    padding-left: 20px;
-    position: relative;
-    line-height: 1.45;
+    color: var(--ink-muted);
 }
 
-.about-highlights li::before {
-    content: "■";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--royal-blue);
-    font-size: 0.85rem;
+.about-highlights li strong {
+    color: var(--ink);
+    font-weight: 500;
 }
 
-/* --------------------------------------------------------------------------
-   Skills Section (#skills) - Tech Grid
-   -------------------------------------------------------------------------- */
-#skills {
-    border-top: 5px solid var(--royal-blue);
-}
-
+/* Skills */
 .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0;
     padding: 0;
     margin: 0;
     list-style: none;
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
 }
 
 .skill-item {
-    flex: 1 1 240px;
-    background-color: var(--pure-white);
-    padding: 20px 22px;
-    border: var(--border-ink-thin);
-    box-shadow: var(--comic-shadow-sm);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.skill-item:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: var(--comic-shadow-blue);
-}
-
-.skill-header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 12px;
-}
-
-.skill-icon-wrapper {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 46px;
-    height: 46px;
-    background-color: var(--royal-blue-tint);
-    border: 1.5px solid var(--royal-blue);
-    border-radius: 8px;
-    flex-shrink: 0;
-    padding: 7px;
-    box-sizing: border-box;
-    transition: background-color 0.2s ease;
-}
-
-.skill-item:hover .skill-icon-wrapper {
-    background-color: var(--royal-blue-subtle);
-}
-
-.skill-icon-wrapper img.skill-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
-
-.skill-icon-wrapper.skill-icon-dual {
-    width: auto;
-    padding: 7px 10px;
-    gap: 6px;
-}
-
-.skill-icon-wrapper.skill-icon-dual img.skill-icon {
-    width: 26px;
-    height: 26px;
+    padding: 24px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
 }
 
 .skill-header h3 {
-    margin: 0;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.15rem;
-    color: var(--ink-black);
-    font-weight: 800;
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .skill-item p {
     margin: 0;
-    font-size: 0.92rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
     color: var(--ink-muted);
 }
 
 /* --------------------------------------------------------------------------
-   Lab Activities Section (#activities) - Kraft Folder Workshop
+   Lab Activities (folder graphics preserved)
    -------------------------------------------------------------------------- */
 #activities {
-    background-color: #f5f1e8;
-    border: var(--border-ink);
-    border-top: 5px solid var(--royal-blue);
     overflow: visible;
 }
 
@@ -596,7 +260,6 @@ section h2 {
     padding: 40px 10px 50px 10px;
 }
 
-/* Base Folder Card */
 .activity-card.folder-card {
     flex: 1 1 380px;
     max-width: 440px;
@@ -616,7 +279,7 @@ section h2 {
 
 .activity-card.folder-card:focus-visible {
     border-radius: 16px;
-    box-shadow: 0 0 0 3px var(--royal-blue);
+    box-shadow: 0 0 0 2px var(--ink);
 }
 
 .folder-wrapper {
@@ -633,7 +296,6 @@ section h2 {
     pointer-events: none;
 }
 
-/* 1. Back Cover */
 .folder-png.folder-back {
     top: 0;
     left: 50%;
@@ -649,17 +311,14 @@ section h2 {
     top: 8px;
     left: calc(50% - 170px);
     z-index: 2;
-    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 800;
+    font-size: 0.78rem;
+    font-weight: 600;
     letter-spacing: 1px;
     color: #432914;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
     pointer-events: none;
     text-transform: uppercase;
 }
 
-/* 2. Sliding Paper Sheet Wrapper */
 .folder-sheet-wrapper {
     position: absolute;
     left: 50%;
@@ -693,56 +352,27 @@ section h2 {
     z-index: 2;
     width: 100%;
     height: 100%;
-    background-color: var(--pure-white);
-    border-radius: 6px;
-    border: var(--border-ink-thin);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid var(--line);
     padding: 14px 18px;
-    box-sizing: border-box;
     overflow-y: auto;
 }
 
-/* Sheet Tab Badge */
 .sheet-badge {
     display: inline-block;
-    background-color: var(--royal-blue);
-    color: var(--pure-white);
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    color: var(--ink-muted);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
-    padding: 2px 8px;
-    border-radius: 4px;
-    border: 1px solid var(--ink-black);
     margin-bottom: 6px;
-}
-
-.folder-sheet .card-preview {
-    background-color: #f8fafc;
-    border: 1px dashed #cbd5e1;
-    border-radius: 6px;
-    padding: 10px;
-    margin: 0 0 8px 0;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #64748b;
-}
-
-.folder-sheet .card-preview img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 4px;
 }
 
 .folder-sheet h3 {
     margin: 0 0 6px 0;
-    font-family: 'Space Grotesk', sans-serif;
     font-size: 1rem;
-    color: var(--ink-black);
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .folder-sheet p {
@@ -752,60 +382,6 @@ section h2 {
     margin: 0 0 10px 0;
 }
 
-.folder-sheet .tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    padding: 0;
-    margin: 0 0 10px 0;
-    list-style: none;
-}
-
-.folder-sheet .tech-tags li {
-    background-color: var(--dirty-white);
-    color: var(--ink-black);
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 2px 7px;
-    border-radius: 4px;
-    border: 1px solid var(--ink-black);
-}
-
-.folder-sheet .card-actions {
-    display: flex;
-    gap: 8px;
-}
-
-.folder-sheet .card-actions .btn {
-    text-decoration: none;
-    font-size: 0.76rem;
-    font-weight: 700;
-    padding: 5px 12px;
-    border-radius: 6px;
-    display: inline-block;
-    border: 1.5px solid var(--ink-black);
-    box-shadow: 2px 2px 0px var(--ink-black);
-}
-
-.folder-sheet .card-actions .btn:first-child {
-    background-color: var(--royal-blue);
-    color: var(--pure-white);
-}
-
-.folder-sheet .card-actions .btn:first-child:hover {
-    background-color: var(--royal-blue-hover);
-}
-
-.folder-sheet .card-actions .btn:last-child {
-    background-color: var(--pure-white);
-    color: var(--ink-black);
-}
-
-.folder-sheet .card-actions .btn:last-child:hover {
-    background-color: #f3f4f6;
-}
-
-/* 3. Front Pocket */
 .folder-png.folder-front {
     bottom: 0;
     left: 50%;
@@ -822,7 +398,6 @@ section h2 {
     display: none;
 }
 
-/* Hover Morph */
 .activity-card.folder-card:hover .folder-sheet-wrapper {
     transform: translateX(-50%) translateY(-75px);
 }
@@ -832,57 +407,35 @@ section h2 {
     filter: drop-shadow(0 14px 18px rgba(67, 41, 20, 0.22));
 }
 
-/* Placeholder Sheet */
 .folder-sheet.placeholder-sheet {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 20px 16px;
-}
-
-.placeholder-graphic {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background-color: #fef3c7;
-    border: 2px dashed #b88a58;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 8px auto 10px auto;
 }
 
 .placeholder-content h3 {
     margin: 0 0 6px 0;
     font-size: 1.05rem;
-    color: #432914;
 }
 
 .placeholder-content p {
-    font-size: 0.82rem;
-    color: #78350f;
     margin: 0 0 12px 0;
-    line-height: 1.45;
 }
 
 .status-badge {
     display: inline-block;
-    background-color: var(--royal-blue-tint);
-    color: var(--royal-blue);
-    font-size: 0.72rem;
-    font-weight: 800;
-    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-size: 0.7rem;
+    font-weight: 500;
     letter-spacing: 0.5px;
     padding: 3px 10px;
     border-radius: 9999px;
-    border: 1px solid var(--royal-blue);
+    border: 1px solid var(--line);
 }
 
-/* ==========================================================================
-   LAB PROJECT MODAL
-   ========================================================================== */
+/* Modal */
 .lab-modal {
     position: fixed;
     top: 0;
@@ -905,13 +458,8 @@ section h2 {
 
 .modal-backdrop {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(17, 24, 39, 0.7);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    inset: 0;
+    background-color: rgba(28, 27, 25, 0.45);
 }
 
 .modal-window {
@@ -921,15 +469,14 @@ section h2 {
     max-width: 960px;
     height: 85vh;
     max-height: 720px;
-    background-color: var(--pure-white);
-    border-radius: 12px;
-    border: 3px solid var(--ink-black);
-    box-shadow: 10px 10px 0px var(--ink-black);
+    background-color: var(--bg);
+    border-radius: 6px;
+    border: 1px solid var(--line);
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    transform: scale(0.95) translateY(12px);
-    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scale(0.97) translateY(10px);
+    transition: transform 0.28s ease;
 }
 
 .lab-modal.is-active .modal-window {
@@ -941,35 +488,27 @@ section h2 {
     align-items: center;
     justify-content: space-between;
     padding: 14px 20px;
-    background-color: var(--dirty-white-panel);
-    border-bottom: 2px solid var(--ink-black);
+    border-bottom: 1px solid var(--line);
 }
 
 .modal-title-group {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .modal-badge {
-    background-color: var(--royal-blue);
-    color: var(--pure-white);
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 800;
+    color: var(--ink-muted);
+    font-size: 0.7rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 3px 8px;
-    border-radius: 4px;
-    border: 1px solid var(--ink-black);
+    letter-spacing: 0.8px;
 }
 
 .modal-header h3 {
     margin: 0;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.05rem;
-    color: var(--ink-black);
-    font-weight: 800;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .modal-actions {
@@ -982,49 +521,39 @@ section h2 {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background-color: var(--royal-blue);
-    color: var(--pure-white);
-    border: 1.5px solid var(--ink-black);
-    box-shadow: 2px 2px 0px var(--ink-black);
+    color: var(--ink);
+    border: 1px solid var(--line);
     font-size: 0.8rem;
-    font-weight: 700;
-    padding: 6px 14px;
-    border-radius: 6px;
+    padding: 6px 12px;
+    border-radius: 4px;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: border-color 0.2s ease;
 }
 
 .btn-new-tab:hover {
-    background-color: var(--royal-blue-hover);
-    transform: translateY(-1px);
-}
-
-.btn-new-tab svg {
-    stroke: currentColor;
+    border-color: var(--ink);
 }
 
 .modal-close-btn {
     background: none;
-    border: 1.5px solid var(--ink-black);
+    border: 1px solid var(--line);
     cursor: pointer;
     padding: 5px;
-    color: var(--ink-black);
-    border-radius: 6px;
+    color: var(--ink);
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.2s, color 0.2s;
+    transition: border-color 0.2s ease;
 }
 
 .modal-close-btn:hover {
-    background-color: var(--royal-blue);
-    color: var(--pure-white);
+    border-color: var(--ink);
 }
 
 .modal-body {
     flex: 1;
-    background-color: #f8fafc;
-    position: relative;
+    background-color: #fff;
 }
 
 .modal-body iframe {
@@ -1034,34 +563,27 @@ section h2 {
     display: block;
 }
 
-/* --------------------------------------------------------------------------
-   Contact Section (#contact) - Comic Panel Style
-   -------------------------------------------------------------------------- */
-#contact {
-    border-top: 5px solid var(--royal-blue);
-}
-
+/* Contact */
 .contact-wrapper {
     display: flex;
-    gap: 28px;
+    gap: 56px;
     flex-wrap: wrap;
 }
 
 .contact-info {
     flex: 1 1 300px;
-    background-color: var(--pure-white);
-    padding: 26px;
-    border: var(--border-ink-thin);
-    box-shadow: var(--comic-shadow-sm);
-    border-radius: 10px;
+    font-style: normal;
 }
 
-.contact-info h3 {
-    margin: 0 0 10px 0;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.25rem;
-    color: var(--ink-black);
-    font-weight: 800;
+.contact-form-container {
+    flex: 1 1 360px;
+}
+
+.contact-info h3,
+.contact-form-container h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .contact-info p {
@@ -1079,23 +601,26 @@ section h2 {
     gap: 12px;
 }
 
+.contact-info li {
+    font-size: 0.92rem;
+    color: var(--ink-muted);
+    overflow-wrap: anywhere;
+}
+
+.contact-info li strong {
+    color: var(--ink);
+    font-weight: 500;
+}
+
 .contact-info li a {
-    color: var(--royal-blue);
-    font-weight: 700;
-    text-decoration: none;
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--line);
 }
 
 .contact-info li a:hover {
-    text-decoration: underline;
-}
-
-.contact-form-container {
-    flex: 1 1 360px;
-    background-color: var(--pure-white);
-    padding: 26px;
-    border: var(--border-ink-thin);
-    box-shadow: var(--comic-shadow-sm);
-    border-radius: 10px;
+    text-decoration-color: var(--ink);
 }
 
 .contact-form {
@@ -1111,53 +636,59 @@ section h2 {
 }
 
 .form-group label {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: var(--ink-black);
+    font-weight: 500;
+    font-size: 0.85rem;
 }
 
 .form-group input,
 .form-group textarea {
-    padding: 12px 14px;
-    border: var(--border-ink-thin);
-    border-radius: 8px;
-    background-color: #faf8f5;
+    padding: 11px 12px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background-color: transparent;
     font-family: inherit;
     font-size: 0.95rem;
-    color: var(--ink-black);
-    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+    color: var(--ink);
+    transition: border-color 0.2s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--royal-blue);
-    box-shadow: 3px 3px 0px var(--royal-blue);
-    background-color: var(--pure-white);
+    border-color: var(--ink);
 }
 
 .form-actions {
-    display: flex;
-    justify-content: flex-start;
     margin-top: 6px;
 }
 
-/* --------------------------------------------------------------------------
-   Footer - Dark Graphic Panel
-   -------------------------------------------------------------------------- */
+.form-actions button {
+    background-color: var(--ink);
+    color: var(--bg);
+    border: 1px solid var(--ink);
+    border-radius: 4px;
+    padding: 11px 22px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.form-actions button:hover {
+    background-color: transparent;
+    color: var(--ink);
+}
+
+/* Footer */
 footer {
-    background-color: var(--ink-black);
-    color: #f4f1ea;
-    padding: 28px 36px;
-    border-top: 3px solid var(--ink-black);
+    padding: 32px 36px;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     flex-wrap: wrap;
     gap: 16px;
@@ -1165,47 +696,33 @@ footer {
 
 .footer-content p {
     margin: 0;
-    font-size: 0.92rem;
-    color: #cbd5e1;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
 }
 
 .footer-links {
     display: flex;
-    gap: 18px;
+    gap: 20px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .footer-links a {
-    color: #93c5fd;
-    font-weight: 700;
+    color: var(--ink-muted);
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.2s;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-    color: var(--pure-white);
-    text-decoration: underline;
+    color: var(--ink);
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints
-   -------------------------------------------------------------------------- */
+/* Responsive */
 @media (max-width: 860px) {
     #home {
-        flex-direction: column;
-        text-align: center;
-        gap: 32px;
-    }
-
-    .hero-polaroid-stage {
-        margin: 0 auto;
-    }
-
-    .hero-actions {
-        justify-content: center;
+        padding: 72px 20px 56px 20px;
     }
 
     .hero-content h1 {
@@ -1213,8 +730,7 @@ footer {
     }
 
     section {
-        margin: 0 16px 24px 16px;
-        padding: 32px 20px;
+        padding: 56px 20px;
     }
 
     header#top {
@@ -1223,6 +739,17 @@ footer {
 
     nav {
         flex-direction: column;
-        gap: 14px;
+        gap: 12px;
+    }
+
+    nav ul {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-highlights {
+        border-left: none;
+        padding-left: 0;
     }
 }
