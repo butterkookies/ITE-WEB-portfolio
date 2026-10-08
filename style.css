@@ -139,7 +139,28 @@ section h2 {
 
 /* Hero */
 #home {
-    padding: 120px 36px 100px 36px;
+    padding: 100px 36px 90px 36px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.hero-avatar-wrapper {
+    flex-shrink: 0;
+}
+
+.hero-avatar {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    display: block;
+    background-color: var(--bg-soft);
 }
 
 .hero-content {
@@ -233,8 +254,41 @@ section h2 {
     border-bottom: 1px solid var(--line);
 }
 
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.skill-icon-wrapper {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.skill-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.skill-icon-wrapper.skill-icon-dual {
+    width: auto;
+    gap: 4px;
+}
+
+.skill-icon-wrapper.skill-icon-dual .skill-icon {
+    width: 20px;
+    height: 20px;
+}
+
 .skill-header h3 {
-    margin: 0 0 8px 0;
+    margin: 0;
     font-size: 1rem;
     font-weight: 600;
 }
@@ -723,6 +777,12 @@ footer {
 @media (max-width: 860px) {
     #home {
         padding: 72px 20px 56px 20px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
     }
 
     .hero-content h1 {
