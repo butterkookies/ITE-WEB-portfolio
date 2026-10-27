@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>My Personal Website</h1>
+        <h5>Welcome to my Professional Student Profile</h5>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="links">
+        <a href="Home.html">Home</a>
+        <a href="Registration.html">Registration</a>
+        <a href="Grades.html">Grades</a>
+        <a href="Profile.html">Profile</a>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <form class="form">
+
+            <label for="name" class="text-inputs">Enter Name:</label><br>
+            <input type="text" placeholder="Enter name"><br><br>
+
+            <label for="email">Enter email</label><br>
+            <input type="text" placeholder="Enter email"><br><br>
+
+            <label for="pass">Enter password</label><br>
+            <input type="password" placeholder="Enter password"><br><br>
+
+            <label for="gender">Gender</label><br>
+            <input type="radio" name="gender" value="Male" checked>Male
+            <input type="radio" name="gender" value="Female">Female <br><br>
+
+            <label for="course">Course</label><br>
+            <select name="course" id="course">
+                <option value="">--Select a course--</option>
+                <option value="BSIT">BSIT</option>
+                <option value="BSCS">BSCS</option>
+                <option value="BSTM">BSTM</option>
+                <option value="BSHM">BSHM</option>
+            </select><br><br>
+
+            <label for="skills">Skills</label><br>
+            <input type="checkbox" name="HTML" value="on">HTML
+            <input type="checkbox" name="CSS" value="on">CSS
+            <input type="checkbox" name="SQL" value="on">SQL <br><br>
+
+            <label for="image">Select file</label><br>
+            <input type="file" name="fileupload" accept="image/*"/><br><br>
+
+            <label for="multiline">Address</label><br>
+            <textarea name="description" cols="50" rows="5"></textarea><br><br>
+
+            <input type="submit" name="submit" value="Submit"/>
+            <input type="reset" name="reset" value="Reset"/>
+
+        </form>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>@ 2026 My Personal Website</p>
+    </footer>
+
+</body>
+</html>

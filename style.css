@@ -300,7 +300,9 @@ section h2 {
 }
 
 /* --------------------------------------------------------------------------
-   Lab Activities (folder graphics preserved)
+   Lab Activities (Interactive Envelope Cards)
+   - Accurately ratioed and scaled folder assets (no stretching or distortion)
+   - Fully responsive for mobile and desktop viewports
    -------------------------------------------------------------------------- */
 #activities {
     overflow: visible;
@@ -309,15 +311,15 @@ section h2 {
 .activities-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 85px 30px;
+    gap: 64px 32px;
     justify-content: center;
-    padding: 40px 10px 50px 10px;
+    padding: 36px 12px 56px 12px;
 }
 
 .activity-card.folder-card {
-    flex: 1 1 380px;
+    flex: 1 1 340px;
     max-width: 440px;
-    height: 315px;
+    width: 100%;
     position: relative;
     background: transparent;
     border: none;
@@ -325,6 +327,8 @@ section h2 {
     cursor: pointer;
     outline: none;
     transition: transform 0.25s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .activity-card.folder-card:hover {
@@ -339,7 +343,10 @@ section h2 {
 .folder-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
+    max-width: 440px;
+    aspect-ratio: 440 / 305;
+    margin: 0 auto;
+    overflow: visible;
 }
 
 .folder-png {
@@ -355,32 +362,35 @@ section h2 {
     left: 50%;
     transform: translateX(-50%);
     width: 93.5%;
-    max-width: 420px;
+    max-width: 412px;
     height: auto;
+    aspect-ratio: 840 / 607;
+    object-fit: contain;
     z-index: 1;
 }
 
 .folder-tab-label {
     position: absolute;
-    top: 8px;
-    left: calc(50% - 170px);
+    top: 2.5%;
+    left: 9.5%;
     z-index: 2;
-    font-size: 0.78rem;
+    font-size: clamp(0.58rem, 2.3vw, 0.78rem);
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     color: #432914;
     pointer-events: none;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .folder-sheet-wrapper {
     position: absolute;
     left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%) translateY(80px);
+    bottom: 5%;
+    transform: translateX(-50%) translateY(32%);
     width: 88%;
     max-width: 388px;
-    height: 265px;
+    height: 85%;
     z-index: 2;
     opacity: 0;
     pointer-events: none;
@@ -389,11 +399,12 @@ section h2 {
 
 .paper-bg-layer {
     position: absolute;
-    top: -6px;
+    top: -4px;
     left: 2px;
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
+    border-radius: 4px;
     z-index: 1;
     transform: rotate(-1.2deg);
     pointer-events: none;
@@ -406,17 +417,23 @@ section h2 {
     z-index: 2;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    box-sizing: border-box;
+    background-color: #ffffff;
     border-radius: 4px;
     border: 1px solid var(--line);
-    padding: 14px 18px;
+    padding: clamp(10px, 2.8vw, 16px);
     overflow-y: auto;
+    scrollbar-width: thin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .sheet-badge {
     display: inline-block;
     color: var(--ink-muted);
-    font-size: 0.7rem;
+    font-size: clamp(0.62rem, 1.8vw, 0.7rem);
     font-weight: 600;
     letter-spacing: 0.8px;
     text-transform: uppercase;
@@ -425,15 +442,20 @@ section h2 {
 
 .folder-sheet h3 {
     margin: 0 0 6px 0;
-    font-size: 1rem;
+    font-size: clamp(0.88rem, 2.2vw, 1rem);
     font-weight: 600;
+    line-height: 1.3;
 }
 
 .folder-sheet p {
-    font-size: 0.82rem;
+    font-size: clamp(0.74rem, 1.9vw, 0.82rem);
     line-height: 1.4;
     color: var(--ink-muted);
     margin: 0 0 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .folder-png.folder-front {
@@ -441,7 +463,10 @@ section h2 {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 449px;
+    max-width: 440px;
+    height: auto;
+    aspect-ratio: 897 / 609;
+    object-fit: contain;
     z-index: 4;
     pointer-events: none;
     transform-origin: bottom center;
@@ -452,34 +477,21 @@ section h2 {
     display: none;
 }
 
-.activity-card.folder-card:hover .folder-sheet-wrapper {
-    transform: translateX(-50%) translateY(-75px);
+.activity-card.folder-card:hover .folder-sheet-wrapper,
+.activity-card.folder-card:focus-visible .folder-sheet-wrapper {
+    transform: translateX(-50%) translateY(-22%);
+    opacity: 1;
 }
 
-.activity-card.folder-card:hover .folder-png.folder-front {
-    transform: translateX(-50%) rotateX(-24deg);
+.activity-card.folder-card:hover .folder-png.folder-front,
+.activity-card.folder-card:focus-visible .folder-png.folder-front {
+    transform: translateX(-50%) rotateX(-22deg);
     filter: drop-shadow(0 14px 18px rgba(67, 41, 20, 0.22));
-}
-
-.folder-sheet.placeholder-sheet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.placeholder-content h3 {
-    margin: 0 0 6px 0;
-    font-size: 1.05rem;
-}
-
-.placeholder-content p {
-    margin: 0 0 12px 0;
 }
 
 .status-badge {
     display: inline-block;
+    align-self: center;
     color: var(--ink-muted);
     font-size: 0.7rem;
     font-weight: 500;
@@ -487,6 +499,45 @@ section h2 {
     padding: 3px 10px;
     border-radius: 9999px;
     border: 1px solid var(--line);
+    background-color: var(--bg-soft);
+}
+
+.status-badge.status-completed {
+    color: #1e6b37;
+    background-color: #edf7ee;
+    border-color: #c3e6cb;
+}
+
+/* Accessible Caption below each envelope */
+.folder-caption {
+    margin-top: 14px;
+    text-align: center;
+    padding: 0 8px;
+}
+
+.caption-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 2px;
+}
+
+.caption-title {
+    margin: 2px 0 4px 0;
+    font-size: clamp(0.92rem, 2.4vw, 1.05rem);
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--ink);
+}
+
+.caption-hint {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    opacity: 0.75;
 }
 
 /* Modal */
@@ -514,6 +565,8 @@ section h2 {
     position: absolute;
     inset: 0;
     background-color: rgba(28, 27, 25, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .modal-window {
@@ -524,13 +577,14 @@ section h2 {
     height: 85vh;
     max-height: 720px;
     background-color: var(--bg);
-    border-radius: 6px;
+    border-radius: 8px;
     border: 1px solid var(--line);
     display: flex;
     flex-direction: column;
     overflow: hidden;
     transform: scale(0.97) translateY(10px);
     transition: transform 0.28s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .lab-modal.is-active .modal-window {
@@ -543,12 +597,15 @@ section h2 {
     justify-content: space-between;
     padding: 14px 20px;
     border-bottom: 1px solid var(--line);
+    background-color: var(--bg);
+    gap: 12px;
 }
 
 .modal-title-group {
     display: flex;
     align-items: center;
     gap: 12px;
+    min-width: 0;
 }
 
 .modal-badge {
@@ -557,18 +614,23 @@ section h2 {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.8px;
+    flex-shrink: 0;
 }
 
 .modal-header h3 {
     margin: 0;
     font-size: 1rem;
     font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .modal-actions {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
 .btn-new-tab {
@@ -581,11 +643,12 @@ section h2 {
     padding: 6px 12px;
     border-radius: 4px;
     text-decoration: none;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-new-tab:hover {
     border-color: var(--ink);
+    background-color: var(--bg-soft);
 }
 
 .modal-close-btn {
@@ -598,16 +661,21 @@ section h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    min-width: 32px;
+    min-height: 32px;
 }
 
 .modal-close-btn:hover {
     border-color: var(--ink);
+    background-color: var(--bg-soft);
 }
 
 .modal-body {
     flex: 1;
     background-color: #fff;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modal-body iframe {
@@ -773,24 +841,43 @@ footer {
     color: var(--ink);
 }
 
-/* Responsive */
+/* ==========================================================================
+   Comprehensive Mobile & Tablet Responsive Queries
+   - Fluid typography and layout scaling
+   - Unstretched, proportionate envelope graphics
+   - Optimized touch targets and spacing
+   ========================================================================== */
 @media (max-width: 860px) {
     #home {
-        padding: 72px 20px 56px 20px;
+        padding: 60px 20px 48px 20px;
     }
 
     .hero-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         gap: 24px;
     }
 
+    .hero-avatar {
+        width: 110px;
+        height: 110px;
+    }
+
     .hero-content h1 {
-        font-size: 2.6rem;
+        font-size: clamp(2.3rem, 7.5vw, 3rem);
+    }
+
+    .hero-content h2 {
+        font-size: 1.05rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
     }
 
     section {
-        padding: 56px 20px;
+        padding: 52px 20px;
     }
 
     header#top {
@@ -808,8 +895,136 @@ footer {
         justify-content: center;
     }
 
+    .about-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+
     .about-highlights {
         border-left: none;
+        border-top: 1px solid var(--line);
         padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .activities-grid {
+        gap: 52px 20px;
+        padding: 24px 6px 36px 6px;
+    }
+
+    .activity-card.folder-card {
+        flex: 1 1 300px;
+        max-width: 420px;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    /* Modal Mobile Adjustments */
+    .modal-window {
+        width: 95vw;
+        height: 88vh;
+        max-height: none;
+        border-radius: 8px;
+    }
+
+    .modal-header {
+        padding: 10px 14px;
+        gap: 8px;
+    }
+
+    .modal-title-group {
+        min-width: 0;
+        flex: 1;
+        gap: 8px;
+    }
+
+    .modal-header h3 {
+        font-size: 0.88rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .btn-new-tab span {
+        display: none;
+    }
+
+    .btn-new-tab {
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 520px) {
+    header#top {
+        padding: 10px 14px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.82rem;
+        padding: 4px;
+    }
+
+    section {
+        padding: 38px 14px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-item {
+        padding: 18px 14px;
+    }
+
+    .activities-grid {
+        gap: 40px 10px;
+        padding: 16px 0 28px 0;
+    }
+
+    .activity-card.folder-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .folder-sheet {
+        padding: 10px 12px;
+    }
+
+    .folder-caption {
+        margin-top: 10px;
+    }
+
+    .caption-title {
+        font-size: 0.94rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 }

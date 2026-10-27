@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finals Lab 8 - Async Promises Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: antiquewhite;
+            padding: 24px 16px;
+            text-align: center;
+        }
+        .dashboard-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: clamp(20px, 5vw, 40px);
+            max-width: 460px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: clamp(1.4rem, 4vw, 1.9rem);
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        button {
+            background-color: royalblue;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            min-width: 90px;
+            min-height: 44px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        button:hover {
+            transform: scale(1.08);
+        }
+        button:active {
+            transform: scale(0.96);
+        }
+        .status-box {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 16px;
+            border: 1px solid #e9ecef;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        #message {
+            font-weight: bold;
+            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+            margin-bottom: 8px;
+            min-height: 32px;
+            color: #333;
+        }
+        #profile, #grades, #schedule {
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-card">
+        <h1>Dashboard Loader</h1>
+        <div class="btn-container">
+            <button id="leftBtn">Pindot</button>
+            <button id="rightBtn">Click</button>
+        </div>
+
+        <div class="status-box">
+            <p id="message">Waiting...</p>
+            <p id="profile">Profile</p>
+            <p id="grades">Grades</p>
+            <p id="schedule">Schedule</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

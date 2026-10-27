@@ -1,0 +1,248 @@
+function showMessage(text){
+    message.innerHTML = text
+}
+
+Button.addEventListener("click", function(){
+    message.innerHTML = "Loading..."
+
+    setTimeout(function(){
+        showMessage("Welcome to Mobile Legends")
+    }, 1000)
+});
+
+
+----------------------------------------------------------------
+
+function loadMessage(){
+    return new Promise(function(resolve, reject){
+        setTimeout(function(){
+
+            let success = true
+
+            if(success){
+                resolve("PDM is Welcome")
+            }else{
+                reject("PDM not Welcome")
+            }
+
+        },2000)
+    })
+}
+
+Button.addEventListener("click", function(){
+    message.innerHTML = "Loading..."
+    loadMessage()
+
+    .then(function(result){
+        message.innerHTML = result
+    })
+
+    .catch(function(error){
+        message.innerHTML = error
+    })
+})
+----------------------------------------------------------------
+function showMessage(){
+    return new Promise(function(resolve){
+        setTimeout(function(){
+            resolve("Checking Account...")
+        }, 2000)
+    })
+}
+
+Button.addEventListener("click", function(){
+    message.innerHTML = "Loading..."
+
+    showMessage()
+
+    .then(function(result){
+        message.innerHTML = result
+
+        return new Promise(function(resolve){
+            setTimeout(function(){
+                resolve("Loading profile...")
+            }, 2000)
+        })
+    })
+
+    .then(function(result){
+        message.innerHTML = result
+        
+        return new Promise(function(){
+            setTimeout(function(){
+                resolve("Welcome!")
+            },3000)
+        })
+    })
+    .then(function(){
+        message.innerHTML = result
+    })
+    
+})
+-----------------------------------------------------------
+const Profile = document.getElementById("profile")
+const Grades = document.getElementById("grades")
+const Schedule = document.getElementById("schedule")
+
+
+Button.addEventListener("click", function(){
+    message.innerHTML = "Loading..."
+
+    Profile.innerHTML = "Profile: Waiting..."
+    Grades.innerHTML = "Grades: Waiting..."
+    Schedule.innerHTML = "Schedule: Waiting..."
+
+    const profilePromise = new Promise(function(resolve){
+        setTimeout(function(){
+            Profile.innerHTML = "Profile: Loaded"
+
+            resolve();
+
+        },1000)
+
+    })
+
+    const gradesPromise = new Promise(function(resolve){
+        setTimeout(function(){
+            Grades.innerHTML = "Grades: Loaded"
+
+            resolve();
+
+        },2000)
+
+    })
+
+    const schedulePromise = new Promise(function(resolve){
+        setTimeout(function(){
+            Schedule.innerHTML = "Schedule: Loaded"
+
+            resolve();
+
+        },3000)
+
+    });
+
+    Promise.all([profilePromise, gradesPromise, schedulePromise])
+
+    .then(function(){
+        message.innerHTML = "Dashboard reardy!"
+
+    });
+})
+
+
+
+button 1 - text color change and 3 messages
+button 2 - change bg of 2 buttons
+const message = document.getElementById("message")
+const Button1 = document.getElementById("leftBtn")
+const Button2 = document.getElementById("rightBtn")
+
+const Profile = document.getElementById("profile")
+const Images = document.getElementById("images")
+const Reels = document.getElementById("reels")
+
+const var1 = document.getElementById("profile")
+const var2 = document.getElementById("grades")
+const var3 = document.getElementById("schedule")
+
+
+Button2.addEventListener("click", function(){
+    Button1.style.backgroundColor = "black"
+    Button2.style.backgroundColor = "indigo"
+    var1.innerHTML = "Profile: Waiting..."
+    var2.innerHTML = "Grades: Waiting..."
+    var3.innerHTML = "Schedule: Waiting..."
+    var1.style.color = "green"
+    var2.style.color = "green"
+    var3.style.color = "green"
+
+    const loadingPromise = new Promise(function(resolve){
+        setTimeout(function(){
+            message.style.color = "red"
+            message.innerHTML = "Loading Images..."
+            var1.innerHTML = "Profile: Loaded"
+
+            resolve();
+
+        },1000)
+
+    })
+
+    const assetsPromise = new Promise(function(resolve){
+        setTimeout(function(){
+            message.style.color = "green"
+            message.innerHTML = "Loading Assets..."
+            var2.innerHTML = "Grades: Loaded"
+
+            resolve();
+
+        },2000)
+
+    })
+
+    const reelsPromise = new Promise(function(resolve){
+        setTimeout(function(){
+            message.style.color = "orange"
+            message.innerHTML = "Loading Reels..."
+            var3.innerHTML = "Schedule: Loaded"
+
+            resolve();
+
+        },3000)
+
+    });
+
+    Promise.all([loadingPromise, assetsPromise, reelsPromise])
+
+    .then(function(){
+        message.innerHTML = "Dashboard ready!"
+
+    });
+})
+
+
+Button1.addEventListener("click", function(){
+    message.style.color = "pink"
+    message.innerHTML = "Loading..."
+
+    const loadingPromise = new Promise(function(resolve){
+        setTimeout(function(){
+            message.style.color = "red"
+            message.innerHTML = "Loading Images..."
+
+            resolve();
+
+        },1000)
+
+    })
+
+    const assetsPromise = new Promise(function(resolve){
+        setTimeout(function(){
+            message.style.color = "green"
+            message.innerHTML = "Loading Assets..."
+
+            resolve();
+
+        },2000)
+
+    })
+
+    const reelsPromise = new Promise(function(resolve){
+        setTimeout(function(){
+            message.style.color = "orange"
+            message.innerHTML = "Loading Reels..."
+
+            resolve();
+
+        },3000)
+
+    });
+
+    Promise.all([loadingPromise, assetsPromise, reelsPromise])
+
+    .then(function(){
+        message.innerHTML = "Dashboard ready!"
+
+    });
+})

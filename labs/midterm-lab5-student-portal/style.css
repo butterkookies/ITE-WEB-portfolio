@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mesh-bg {
+    background-color: #fdfbfb;
+    background-image: 
+        radial-gradient(at 0% 0%,
+        #fed7aa 0px, transparent 50%),
+        radial-gradient(at 100% 100%,
+        #bae6fd 0px, transparent 50%);
+}
+.header,h1, p {
+    text-align: center;
+}
+.header {
+    background-color: cyan;
+    padding: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+ }
+
+ .subtext {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+ }
+
+ .nav {
+    border-color: #834702;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 50px;
+ }
+
+ .links {
+    background-color: aquamarine;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+ }
+
+ .section-card {
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 208, 0, 0.753);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    justify-content: end;
+    align-items: start;
+    flex: 6;
+ }
+
+ .aside-card {
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 0, 0, 0.25);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    flex: 3;
+ }
+
+ .list {
+    padding-left: 20px;
+ }
+
+ .container {
+    display: flex;
+ }
+
+ .footer {
+    margin: 10px;
+    padding: 150px;
+    background-color: #bae6fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.35);
+ }
+ 
+
+.main {
+    margin: 10px;
+    padding: 20px;
+    background-color: #afff46a8;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.35);
+}
+
+.form {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px dashed;
+    width: 450px;
+
+}
+
+.table-bg {
+    margin: 10px;
+    padding: 20px;
+    background-color: #afff46a8;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.35);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: rgba(85, 95, 148, 0.407);
+}
+
+td {
+    background-color: #ffffff;
+}
+
+tr:last-child {
+    font-weight: bold;
+    column-span: 6;
+    background-color: #778fbf;
+}
+
+.table-names {
+    background-color: rgb(71, 98, 174);
+}
+
+.profile-main {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    background-color: rgb(155, 127, 181);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.35);
+}
+
+.photo {
+    border: 2px solid;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    /* flex: 3; */
+}
+
+.details {
+    padding: 20px;
+    width: 80%;
+}
+
+.profile-details {
+    padding-left: 30px;
+}
+@media (max-width: 768px) {
+    .header {
+        padding: 24px 16px;
+        margin: 8px;
+    }
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    .links {
+        margin: 8px;
+        padding: 8px;
+    }
+    .nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .nav a {
+        font-size: 0.9rem;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .section-card, .aside-card {
+        flex: none;
+        width: auto;
+        margin: 8px;
+    }
+    .form {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .form input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+    }
+    .table-bg {
+        overflow-x: auto;
+        margin: 8px;
+        padding: 12px;
+    }
+    .table {
+        font-size: 0.85rem;
+        min-width: 480px;
+    }
+    .profile-main {
+        flex-direction: column;
+        align-items: center;
+        margin: 8px;
+        padding: 16px;
+    }
+    .details {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .footer {
+        padding: 40px 16px;
+        margin: 8px;
+    }
+}

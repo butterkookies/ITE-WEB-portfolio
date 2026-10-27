@@ -1,0 +1,29 @@
+gawa ng student profile
+
+std info
+- name
+- course\
+- yr lebel
+
+3 buttons:
+click change color
+- turn yellow button
+- change text to double click
+
+double click
+- change text to double click
+
+2nd button
+- hide profile
+
+3rd
+- show profile
+
+then my parang logs sa baba that shows every changes
+
+sa baba merong select dropdown
+- 3 courses
+- everytiem i select a course nag u-update ang std info
+
+Sa baba may table
+meron ding 2 buttons (palit ng color by even or odd)

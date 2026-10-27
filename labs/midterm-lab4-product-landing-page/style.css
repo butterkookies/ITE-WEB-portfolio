@@ -1,0 +1,290 @@
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
+body{
+    background-image: url(bg.jpg);
+    backdrop-filter: blur(10px);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    background-color: beige;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    flex: 2;
+}
+nav{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.links{
+    flex: 3;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.links a{
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+}
+.link:hover{
+    color: gold;
+    transition: 0.5s;
+}
+
+.home{
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.info{
+    font-size: 30px;
+    padding: 20px;
+    text-align: justify;
+    
+}
+.about{
+    padding: 30px;
+}
+.tms{
+    text-align: center;
+    font-size: 100px ;
+}
+
+.tms img{
+    transition: transform 2s ease;
+    border-radius: 10px;
+}
+
+.tms img:hover{
+    transform: scale(1.1);
+}
+.titms{
+    font-size: 70px;
+}
+.ims{
+    font-size: 30px;
+    justify-content: center;
+    padding: 30px;
+
+}
+
+footer {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    padding: 50px 20px 20px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col h3, 
+.footer-col h4 {
+    color: #ffc72c;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a,
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover,
+.social-links a:hover {
+    color: #ffc72c;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444444;
+    padding-top: 20px;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #888888;
+}
+
+
+
+
+.Products {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+.Products > div {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.Products img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 2s ease;
+}
+.Products img:hover{
+    transform: scale(1.1);
+}
+
+
+.captions {
+    display: block;             
+    margin-top: 10px;          
+    font-size: 1.1rem;          
+    font-weight: bold;          
+    color: #333333;             
+    text-transform: capitalize; 
+    letter-spacing: 0.5px;     
+}
+
+.ordering{
+    border: #333333 solid;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 2s ease;
+}
+.ordering a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+.ordering:hover{
+    background-color: gold;
+    transform: scale(1.1);
+}
+
+.aboutmc{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 14px;
+    }
+    .logo img {
+        height: 70px;
+        width: auto;
+    }
+    nav {
+        padding: 8px;
+    }
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    .links a {
+        font-size: 18px;
+    }
+    .home {
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 12px;
+    }
+    .imagengmcdo img {
+        max-width: 100%;
+        height: auto;
+    }
+    .info {
+        font-size: 16px;
+        padding: 10px 0;
+        text-align: left;
+    }
+    .ordering a {
+        font-size: 18px;
+    }
+    .Products {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 10px;
+    }
+    .Products > div {
+        flex: 1 1 130px;
+        max-width: 160px;
+        padding: 10px;
+    }
+    .Products img {
+        width: 100%;
+        height: 120px;
+    }
+    .tms {
+        font-size: 32px;
+        padding: 0 10px;
+    }
+    .titms {
+        font-size: 22px;
+    }
+    .tms img {
+        max-width: 100%;
+        height: auto;
+    }
+    .about {
+        padding: 20px 14px;
+    }
+    .ims {
+        font-size: 16px;
+        padding: 14px;
+    }
+}

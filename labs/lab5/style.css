@@ -1,125 +1,248 @@
-/* Basic Lab Activity Styling */
-* {
-    box-sizing: border-box;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-    line-height: 1.6;
-    padding: 30px 20px;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
+html{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.lab-container {
-    width: 100%;
-    max-width: 800px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e2e8f0;
-    padding: 36px 40px;
-    display: flex;
-    flex-direction: column;
+.mesh-bg {
+    background-color: #fdfbfb;
+    background-image: 
+        radial-gradient(at 0% 0%,
+        #fed7aa 0px, transparent 50%),
+        radial-gradient(at 100% 100%,
+        #bae6fd 0px, transparent 50%);
 }
-
-.lab-header {
-    border-bottom: 2px solid #f1f5f9;
-    padding-bottom: 20px;
-    margin-bottom: 30px;
-}
-
-.lab-badge {
-    display: inline-block;
-    background-color: #fef3c7;
-    color: #92400e;
-    font-size: 0.8rem;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 9999px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.lab-header h1 {
-    font-size: 1.75rem;
-    color: #0f172a;
-    margin-bottom: 6px;
-}
-
-.lab-meta {
-    font-size: 0.95rem;
-    color: #64748b;
-}
-
-.lab-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.placeholder-box {
+.header,h1, p {
     text-align: center;
-    background-color: #fffbeb;
-    border: 2px dashed #fde68a;
-    border-radius: 12px;
-    padding: 40px 30px;
-    width: 100%;
-    max-width: 520px;
 }
-
-.icon-circle {
-    width: 80px;
-    height: 80px;
-    background-color: #fef3c7;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 18px auto;
-}
-
-.placeholder-box h2 {
-    font-size: 1.3rem;
-    color: #78350f;
-    margin-bottom: 10px;
-}
-
-.placeholder-box p {
-    font-size: 0.95rem;
-    color: #92400e;
+.header {
+    background-color: cyan;
+    padding: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 20px;
-}
+    margin-top: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+ }
 
-.tags {
+ .subtext {
     display: flex;
-    gap: 8px;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: end;
+ }
+
+ .nav {
+    border-color: #834702;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 50px;
+ }
+
+ .links {
+    background-color: aquamarine;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+ }
+
+ .section-card {
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 208, 0, 0.753);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    justify-content: end;
+    align-items: start;
+    flex: 6;
+ }
+
+ .aside-card {
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 0, 0, 0.25);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    flex: 3;
+ }
+
+ .list {
+    padding-left: 20px;
+ }
+
+ .container {
+    display: flex;
+ }
+
+ .footer {
+    margin: 10px;
+    padding: 150px;
+    background-color: #bae6fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.35);
+ }
+ 
+
+.main {
+    margin: 10px;
+    padding: 20px;
+    background-color: #afff46a8;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.35);
 }
 
-.tags span {
+.form {
+    padding: 20px;
+    border-radius: 12px;
     background-color: #ffffff;
-    color: #78350f;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 6px;
-    border: 1px solid #fde68a;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px dashed;
+    width: 450px;
+
 }
 
-.lab-footer {
-    border-top: 1px solid #f1f5f9;
-    padding-top: 20px;
-    margin-top: 30px;
+.table-bg {
+    margin: 10px;
+    padding: 20px;
+    background-color: #afff46a8;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.35);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
     text-align: center;
-    font-size: 0.85rem;
-    color: #94a3b8;
+}
+
+th {
+    background-color: rgba(85, 95, 148, 0.407);
+}
+
+td {
+    background-color: #ffffff;
+}
+
+tr:last-child {
+    font-weight: bold;
+    column-span: 6;
+    background-color: #778fbf;
+}
+
+.table-names {
+    background-color: rgb(71, 98, 174);
+}
+
+.profile-main {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    background-color: rgb(155, 127, 181);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.35);
+}
+
+.photo {
+    border: 2px solid;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    /* flex: 3; */
+}
+
+.details {
+    padding: 20px;
+    width: 80%;
+}
+
+.profile-details {
+    padding-left: 30px;
+}
+@media (max-width: 768px) {
+    .header {
+        padding: 24px 16px;
+        margin: 8px;
+    }
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    .links {
+        margin: 8px;
+        padding: 8px;
+    }
+    .nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .nav a {
+        font-size: 0.9rem;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .section-card, .aside-card {
+        flex: none;
+        width: auto;
+        margin: 8px;
+    }
+    .form {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .form input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+    }
+    .table-bg {
+        overflow-x: auto;
+        margin: 8px;
+        padding: 12px;
+    }
+    .table {
+        font-size: 0.85rem;
+        min-width: 480px;
+    }
+    .profile-main {
+        flex-direction: column;
+        align-items: center;
+        margin: 8px;
+        padding: 16px;
+    }
+    .details {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .footer {
+        padding: 40px 16px;
+        margin: 8px;
+    }
 }
