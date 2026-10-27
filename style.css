@@ -27,11 +27,79 @@ body {
     color: var(--ink);
     line-height: 1.65;
     overflow-x: hidden;
+    position: relative;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Ambient Background Light Gradient
+   - Very subtle faint blue moving light gradient touching ~10% of the canvas
+   - Softly mixes into the warm off-white canvas (--bg: #f5f2ec)
+   - Butter-smooth continuous floating motion with hardware acceleration
+   -------------------------------------------------------------------------- */
+.ambient-light-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.ambient-light-orb {
+    position: absolute;
+    width: clamp(280px, 34vw, 520px);
+    height: clamp(280px, 34vw, 520px);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(145, 198, 255, 0.48) 0%,
+        rgba(170, 212, 255, 0.28) 32%,
+        rgba(195, 226, 255, 0.12) 55%,
+        transparent 72%
+    );
+    filter: blur(48px);
+    transform: translate3d(12vw, 12vh, 0);
+    animation: ambientLightMove 26s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+@keyframes ambientLightMove {
+    0% {
+        transform: translate3d(8vw, 10vh, 0) scale(1);
+    }
+    25% {
+        transform: translate3d(55vw, 20vh, 0) scale(1.08);
+    }
+    50% {
+        transform: translate3d(32vw, 58vh, 0) scale(0.94);
+    }
+    75% {
+        transform: translate3d(10vw, 40vh, 0) scale(1.06);
+    }
+    100% {
+        transform: translate3d(60vw, 46vh, 0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ambient-light-orb {
+        animation: none;
+        transform: translate3d(20vw, 20vh, 0);
+    }
 }
 
 /* Header & Navigation */
 header#top {
-    background-color: var(--bg);
+    background-color: rgba(245, 242, 236, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 20px 36px;
     border-bottom: 1px solid var(--line);
     position: sticky;
