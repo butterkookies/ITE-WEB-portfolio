@@ -101,16 +101,26 @@ main {
     }
 }
 
-/* Header & Navigation */
+/* Header & Navigation
+   - Borderless, seamless with main canvas at top
+   - Dynamically changes on scroll to a soft frosted glass appearance
+*/
 header#top {
-    background-color: rgba(245, 242, 236, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 20px 36px;
-    border-bottom: 1px solid var(--line);
+    background-color: transparent;
+    padding: 22px 36px;
+    border-bottom: none;
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+header#top.scrolled {
+    background-color: rgba(245, 242, 236, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    padding: 16px 36px;
 }
 
 nav {
@@ -1029,6 +1039,10 @@ footer {
         padding: 14px 20px;
     }
 
+    header#top.scrolled {
+        padding: 10px 20px;
+    }
+
     nav {
         flex-direction: column;
         gap: 12px;
@@ -1105,6 +1119,10 @@ footer {
 @media (max-width: 520px) {
     header#top {
         padding: 10px 14px;
+    }
+
+    header#top.scrolled {
+        padding: 8px 14px;
     }
 
     nav ul {

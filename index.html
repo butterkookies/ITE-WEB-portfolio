@@ -743,6 +743,18 @@
         }, { rootMargin: '-40% 0px -55% 0px' });
         document.querySelectorAll('main > section[id]').forEach(s => spy.observe(s));
 
+        // Changeable Header on Scroll (seamless transparent at top, frosted glass when scrolled)
+        const headerTop = document.getElementById('top');
+        const handleHeaderScroll = () => {
+            if (window.scrollY > 24) {
+                headerTop.classList.add('scrolled');
+            } else {
+                headerTop.classList.remove('scrolled');
+            }
+        };
+        window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+        handleHeaderScroll();
+
         // Reliable in-page anchor scrolling (offset for sticky header)
         document.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', (e) => {
