@@ -16,9 +16,9 @@
 
 <body>
 
-    <!-- Ambient Faint Blue Moving Light Gradient (Subtle 10% Aura) -->
+    <!-- Ambient Blue Inspo Gradient (Moving Horizontally) -->
     <div class="ambient-light-bg" aria-hidden="true">
-        <div class="ambient-light-orb"></div>
+        <div class="ambient-inspo-layer"></div>
     </div>
 
     <!-- ==========================================================================
@@ -57,7 +57,50 @@
 
             <div class="hero-container">
                 <div class="hero-avatar-wrapper">
-                    <img src="images/profile.png" alt="Andrei - Profile Picture" class="hero-avatar" width="130" height="130">
+                    <div class="polaroid-wrapper">
+                        <!-- 3D Realistic Red Pushpin -->
+                        <svg class="polaroid-pin" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <defs>
+                                <radialGradient id="pinHeadGrad" cx="35%" cy="30%" r="65%">
+                                    <stop offset="0%" stop-color="#ff8e8e" />
+                                    <stop offset="25%" stop-color="#ef4444" />
+                                    <stop offset="68%" stop-color="#b91c1c" />
+                                    <stop offset="92%" stop-color="#7f1d1d" />
+                                    <stop offset="100%" stop-color="#450a0a" />
+                                </radialGradient>
+                                <linearGradient id="pinCollarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#f87171" />
+                                    <stop offset="35%" stop-color="#dc2626" />
+                                    <stop offset="85%" stop-color="#991b1b" />
+                                    <stop offset="100%" stop-color="#450a0a" />
+                                </linearGradient>
+                                <radialGradient id="pinHoleShadow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="rgba(20, 8, 8, 0.65)" />
+                                    <stop offset="100%" stop-color="rgba(20, 8, 8, 0)" />
+                                </radialGradient>
+                            </defs>
+                            <!-- Puncture Shadow -->
+                            <ellipse cx="20" cy="38" rx="5" ry="2.2" fill="url(#pinHoleShadow)" />
+                            <!-- Collar Base -->
+                            <path d="M15.5 25 C15.5 24 24.5 24 24.5 25 L23.5 32 C23.5 33 16.5 33 16.5 32 Z" fill="url(#pinCollarGrad)" />
+                            <!-- Collar Ring -->
+                            <ellipse cx="20" cy="25" rx="6.5" ry="3" fill="#ef4444" stroke="#881337" stroke-width="0.75" />
+                            <ellipse cx="20" cy="24.5" rx="4.5" ry="1.8" fill="#fca5a5" opacity="0.65" />
+                            <!-- Spherical Pin Head -->
+                            <circle cx="20" cy="15" r="12.5" fill="url(#pinHeadGrad)" />
+                            <!-- Specular Highlight -->
+                            <ellipse cx="16" cy="11" rx="4.2" ry="3" transform="rotate(-28 16 11)" fill="#ffffff" opacity="0.85" />
+                            <circle cx="15" cy="10" r="1.5" fill="#ffffff" opacity="0.95" />
+                            <!-- Bottom Rim Ambient Glow -->
+                            <path d="M11.5 21.5 C14.5 25.5 25.5 25.5 28.5 21.5" stroke="#fca5a5" stroke-width="1.2" opacity="0.5" stroke-linecap="round" fill="none" />
+                        </svg>
+
+                        <div class="polaroid-card">
+                            <div class="polaroid-photo-frame">
+                                <img src="images/profile.png" alt="Andrei - Profile Picture" class="hero-avatar" width="146" height="195">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="hero-content">
                 <h1>Andrei</h1>

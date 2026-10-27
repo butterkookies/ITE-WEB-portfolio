@@ -36,10 +36,11 @@ main {
 }
 
 /* --------------------------------------------------------------------------
-   Ambient Background Light Gradient
-   - Very subtle faint blue moving light gradient touching ~10% of the canvas
-   - Softly mixes into the warm off-white canvas (--bg: #f5f2ec)
-   - Butter-smooth continuous floating motion with hardware acceleration
+   Ambient Background Blue Gradient (Moving Horizontally)
+   - Captured from inspo: rich cerulean azure (#047ae8), sky blue (#3091ef / #54a4e5)
+     and atmospheric mist (#a7cfe4 / #b7d3eb)
+   - Softly mixes into current off-white canvas (--bg: #f5f2ec)
+   - Continuous horizontal movement across the viewport
    -------------------------------------------------------------------------- */
 .ambient-light-bg {
     position: fixed;
@@ -52,46 +53,51 @@ main {
     overflow: hidden;
 }
 
-.ambient-light-orb {
+.ambient-inspo-layer {
     position: absolute;
-    width: clamp(280px, 34vw, 520px);
-    height: clamp(280px, 34vw, 520px);
-    border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(145, 198, 255, 0.48) 0%,
-        rgba(170, 212, 255, 0.28) 32%,
-        rgba(195, 226, 255, 0.12) 55%,
-        transparent 72%
-    );
-    filter: blur(48px);
-    transform: translate3d(12vw, 12vh, 0);
-    animation: ambientLightMove 26s ease-in-out infinite alternate;
+    top: -12%;
+    left: -40vw;
+    width: 180vw;
+    height: 95vh;
+    background: 
+        radial-gradient(ellipse 70% 55% at 28% 24%, rgba(4, 122, 232, 0.32) 0%, rgba(48, 145, 239, 0.20) 35%, rgba(167, 207, 228, 0.09) 60%, transparent 80%),
+        radial-gradient(ellipse 65% 50% at 75% 32%, rgba(6, 124, 233, 0.26) 0%, rgba(84, 164, 229, 0.16) 40%, rgba(183, 211, 235, 0.08) 65%, transparent 82%),
+        linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(167, 207, 228, 0.14) 15%, 
+            rgba(48, 145, 239, 0.26) 32%, 
+            rgba(4, 122, 232, 0.32) 50%, 
+            rgba(48, 145, 239, 0.24) 68%, 
+            rgba(167, 207, 228, 0.12) 85%, 
+            transparent 100%
+        ),
+        linear-gradient(180deg, 
+            rgba(4, 122, 232, 0.22) 0%, 
+            rgba(48, 145, 239, 0.14) 38%, 
+            rgba(167, 207, 228, 0.06) 65%, 
+            transparent 100%
+        );
+    filter: blur(52px);
+    animation: horizontalGradientSweep 24s ease-in-out infinite alternate;
     will-change: transform;
 }
 
-@keyframes ambientLightMove {
+@keyframes horizontalGradientSweep {
     0% {
-        transform: translate3d(8vw, 10vh, 0) scale(1);
-    }
-    25% {
-        transform: translate3d(55vw, 20vh, 0) scale(1.08);
+        transform: translate3d(-15vw, 0, 0);
     }
     50% {
-        transform: translate3d(32vw, 58vh, 0) scale(0.94);
-    }
-    75% {
-        transform: translate3d(10vw, 40vh, 0) scale(1.06);
+        transform: translate3d(15vw, 0, 0);
     }
     100% {
-        transform: translate3d(60vw, 46vh, 0) scale(1);
+        transform: translate3d(-15vw, 0, 0);
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .ambient-light-orb {
+    .ambient-inspo-layer {
         animation: none;
-        transform: translate3d(20vw, 20vh, 0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
@@ -217,18 +223,89 @@ section h2 {
     flex-wrap: wrap;
 }
 
+/* --------------------------------------------------------------------------
+   3D Realistic Polaroid Profile Picture
+   - Vertical rectangular card with authentic photo paper border & chin
+   - 3D realistic red pushpin with specular spherical shine & drop shadow
+   - Subtle tactile rotation and interactive spring lift on hover
+   -------------------------------------------------------------------------- */
 .hero-avatar-wrapper {
     flex-shrink: 0;
+    padding-top: 12px;
 }
 
-.hero-avatar {
-    width: 130px;
-    height: 130px;
+.polaroid-wrapper {
+    position: relative;
+    display: inline-block;
+    filter: drop-shadow(0 14px 26px rgba(45, 35, 25, 0.16)) drop-shadow(0 3px 6px rgba(45, 35, 25, 0.08));
+    transform: rotate(-2.5deg);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
+    cursor: default;
+}
+
+.polaroid-wrapper:hover {
+    transform: rotate(0deg) translateY(-6px) scale(1.025);
+    filter: drop-shadow(0 22px 36px rgba(45, 35, 25, 0.22)) drop-shadow(0 6px 12px rgba(45, 35, 25, 0.12));
+}
+
+.polaroid-card {
+    position: relative;
+    width: clamp(142px, 18vw, 168px);
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 11px 11px 34px 11px;
+    box-sizing: border-box;
+    box-shadow: 
+        inset 0 0 0 1px rgba(0, 0, 0, 0.05),
+        0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.polaroid-photo-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 2px;
+    background-color: #1a1a1a;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.28);
+}
+
+.polaroid-photo-frame .hero-avatar {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid var(--line);
+    object-position: center top;
     display: block;
-    background-color: var(--bg-soft);
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+/* Subtle realistic gloss sheen across the photograph */
+.polaroid-photo-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.26) 0%,
+        rgba(255, 255, 255, 0.08) 32%,
+        transparent 54%
+    );
+    pointer-events: none;
+}
+
+/* 3D Realistic Red Pushpin */
+.polaroid-pin {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 34px;
+    height: 40px;
+    z-index: 10;
+    pointer-events: none;
+    filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.38));
 }
 
 .hero-content {
