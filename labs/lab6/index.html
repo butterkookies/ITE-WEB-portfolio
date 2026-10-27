@@ -1,244 +1,87 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    </head>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finals Lab 6 - AJAX &amp; XMLHttpRequest</title>
     <style>
-        *{
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        body{
-            text-align: center;
-            margin: 25px;
-            background-color: rgb(255, 255, 255);
-        }
-
-        .card{
-            background-color: rgb(112, 168, 164);
-            margin: auto;
-            padding: 20px;
-            border-radius: 16px;
-            border: solid rgb(0, 0, 0) ;
-        }
-        #card2{
-            text-align: left;
-            background-color: rgb(255, 255, 255);
-            margin: auto;
-            padding: 20px;
-            border-radius: 16px;
-            border: solid black ;
-        }
-
-        .card3{
-            text-align: center;
-            background-color: rgb(255, 255, 255);
-            margin: auto;
-            padding: 5px;
-            border-radius: 16px;
-            border: solid black ;
-        }
-
-        .card4{
-            text-align: center;
-            background-color: rgb(255, 255, 255);
-            margin: auto;
-            padding: 5px;
-            border-radius: 16px;
-            border: solid black ;
-        }
-
-        .courseCard{
-            text-align: left;
-            margin: auto;
-            padding: 5px;
-            border-radius: 16px;
-            border: none;
-        }
-
-
-        button{
-            margin: 30px;
-            background-color: rgb(179, 218, 218);
-            border: solid rgb(0, 0, 0) ;
-            padding: 20px;
-            border-radius: 12px;
-            width: 20%;
-        }
-        
-        #course{
-            width: 500px;
-            height: 30px;
-            border: solid black ;
-            border-radius: 8px;
-        }
-
-        .tableCard{
+        body {
             display: flex;
             justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f3ef;
+            padding: 24px 16px;
             text-align: center;
-            margin: auto;
-            padding: 5px;
+        }
+        .container {
+            background-color: #ffffff;
+            border: 1px solid #e5dfd5;
             border-radius: 16px;
+            padding: clamp(24px, 5vw, 40px);
+            max-width: 460px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        }
+        h1 {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            color: #1c1b19;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: royalblue;
+            color: white;
+            padding: 13px 26px;
             border: none;
-
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 4px 12px rgba(65, 105, 225, 0.3);
         }
-
-        #table{
-            border: solid;
-            width: 100%;
+        button:hover {
+            background-color: #3158c9;
+            transform: translateY(-2px);
         }
-
-        #colName{
-            background-color: white;
-            height: 40px;
+        button:active {
+            transform: translateY(0);
         }
-
-        .tblBtn{
-            margin: 30px;
-            background-color: rgb(179, 218, 218);
-            border: solid rgb(0, 0, 0) ;
-            padding: 20px;
-            width: 20%;
+        .output-box {
+            margin-top: 24px;
+            background-color: #faf9f6;
+            border: 1px dashed #d5cec2;
+            border-radius: 12px;
+            padding: 16px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
-        #course{
-            width: 100%;
-            height: 40px;
-        }
-
-        
-
-        @media (max-width: 680px) {
-            body {
-                margin: 12px 6px;
-            }
-            .card {
-                padding: 14px 10px;
-            }
-            button, .tblBtn {
-                width: calc(50% - 16px);
-                margin: 6px 4px;
-                padding: 12px 6px;
-                font-size: 0.85rem;
-            }
-            #changeTitle, #hideProfile, #showProfile {
-                width: calc(33% - 8px);
-                min-width: 80px;
-                padding: 10px 4px;
-            }
-            .tableCard {
-                overflow-x: auto;
-            }
-            #table {
-                min-width: 300px;
-            }
+        #result {
+            font-size: 0.95rem;
+            color: #4a4742;
+            word-break: break-word;
+            white-space: pre-wrap;
+            line-height: 1.5;
         }
     </style>
-
-    <body>
-
-        <div class="card">
-            <h1 id="title">My Student Profile</h1>
-            <p id="subtitle">Welcome to my Interactive Profile!</p>
-
-            <div id="card2">
-                <h3>Student Information</h3>
-                <p>Name: <b id="name">Andrei Geronimo</b></p>
-                <p>Course: <b id="courseProfile"></b></p>
-                <p>Year: <b id="year">3rd Year</b></p>
-            </div>
-
-            <br>
-            
-            <button id="changeTitle">Change</button>
-            <button id="hideProfile">Hide Profile</button>
-            <button id="showProfile">Show Profile</button>
-
-            <div class="card3">
-                <h4 id="buttonLog">Output</h4>
-            </div>
-
-            <br><hr>
-
-            <div class="courseCard">
-                <h3>Choose Your Course:</h3>
-
-                <select id="course">
-                    <option value="" disabled selected>Select Course</option>
-                    <option value="BSIT">BSIT</option>
-                    <option value="BSCS">BSCS</option>
-                </select>
-
-            </div>
-
-            <br><br>
-            <div class="card4">
-                <h4 id="courseLog">Output</h4>
-            </div>
-
-            <hr>
-
-            <div class="tableCard">
-                
-                <table border="2" id="table">
-
-                    <tr id="colName">
-                        <th>No.</th>
-                        <th>Name</th>
-                        <th>Course</th>
-                        <th>Year</th>
-                    </tr>
-
-                    <tr>
-                        <td>1</td>
-                        <td>Juan</td>
-                        <td>BSIT</td>
-                        <td>3rd Year</td>
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>Andrei</td>
-                        <td>BSIT</td>
-                        <td>2nd Year</td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
-                        <td>Ed</td>
-                        <td>BSCS</td>
-                        <td>1st Year</td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>Kasilag</td>
-                        <td>BSIT</td>
-                        <td>2nd Year</td>
-                    </tr>
-
-                </table>
-
-            </div>
-            <button id="btnOdd" class="tblBtn">Apply CSS Odd</button>
-            <button id="btnEven" class="tblBtn">Apply CSS Even</button>
-            <button id="btnHide" class="tblBtn">Hide</button>
-            <button id="btnShow" class="tblBtn">Show</button>
-
-            <div class="card4">
-                <h4 id="tableLog">Output</h4>
-            </div>
-
-
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information</h1>
+        <button id="loadBtn">Load Students</button>
+        <div class="output-box">
+            <p id="result">No Information Yet</p>
         </div>
-        
-        <script src="script.js"></script>
+    </div>
 
-
-    </body>
-    </html>
+    <script src="script.js"></script>
+</body>
+</html>

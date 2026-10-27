@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finals Lab 6 - AJAX &amp; XMLHttpRequest</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f3ef;
+            padding: 24px 16px;
+            text-align: center;
+        }
+        .container {
+            background-color: #ffffff;
+            border: 1px solid #e5dfd5;
+            border-radius: 16px;
+            padding: clamp(24px, 5vw, 40px);
+            max-width: 460px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        }
+        h1 {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            color: #1c1b19;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: royalblue;
+            color: white;
+            padding: 13px 26px;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 4px 12px rgba(65, 105, 225, 0.3);
+        }
+        button:hover {
+            background-color: #3158c9;
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        .output-box {
+            margin-top: 24px;
+            background-color: #faf9f6;
+            border: 1px dashed #d5cec2;
+            border-radius: 12px;
+            padding: 16px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #result {
+            font-size: 0.95rem;
+            color: #4a4742;
+            word-break: break-word;
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information</h1>
+        <button id="loadBtn">Load Students</button>
+        <div class="output-box">
+            <p id="result">No Information Yet</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
