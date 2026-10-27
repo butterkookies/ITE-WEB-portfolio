@@ -3,170 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>McDonald's | Minimal Product Showcase &amp; Story</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
-<body >
+<body>
 
-    <header >
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#home" class="brand-wrapper">
+                <img src="image.png" alt="McDonald's Golden Arches">
+                <span class="brand-name">McDonald's</span>
+                <span class="brand-tag">IT31 Lab 04</span>
+            </a>
 
-        <div class="logo">
-            <img src="image.png" height="150px">
+            <nav>
+                <ul class="links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#prod">Products</a></li>
+                    <li><a href="#con">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#prod" class="btn-nav-order">Explore Menu</a>
+            </div>
         </div>
-        
-
-        <nav>
-            <ul class="links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#prod">Products</a></li>
-                <li><a href="#con">Contact</a></li>
-            </ul>
-            
-        </nav>
-
     </header>
 
-    <section class="home">
-    
-        <div class="imagengmcdo" id="home">
+    <!-- Hero Section -->
+    <main>
+        <section class="home" id="home">
+            <div class="aboutmc">
+                <div class="hero-pill">
+                    <span class="dot"></span>
+                    <span>Est. 1940 • Feel-Good Moments</span>
+                </div>
 
-            <img src="mcdo.png" >
+                <h1>
+                    Delicious moments, <br>
+                    <span class="highlight-gold">crafted</span> for <span class="highlight-red">everyone.</span>
+                </h1>
 
-        </div>
+                <p class="info">
+                    McDonald's is a global icon known for wholesome burgers, golden fries, and crispy chicken at honest prices. 
+                    From San Bernardino in 1940 to communities across the globe, we bring taste, convenience, and joy together.
+                </p>
 
-        <div class="aboutmc">
-
-            <p class="info">
-                McDonald's is a large global fast-food chain known for selling burgers, french fries, and chicken items at affordable prices.
-                As of 2024, it is the second-largest by number of locations in the world, behind the Chinese chain Mixue Ice Cream & Tea.
-                May 15, 1940, in San Bernardino, California, U.S.
-            </p>
-
-            <button class="ordering">
-                <a href="#prod">Check Products</a>
-            </button>
-
-        </div>
-
-        
-
-    </section>
-
-    <section class="about" id="about">
-
-        <p class="tms">
-            Our <b style="color: red;">Mission</b> And <b style="color: gold;">Vision</b>  <br><br>
-            <img src="tatay.png" alt="tatay" height="300px">
-        </p>
-
-        
-
-        <div class="mission">
-
-            <p class="titms">
-                Our <b style="color: red;">Mission</b>
-            </p><br>
-            
-            
-
-            <p class="ims">
-                Our mission is to make delicious feel-good moments easy for everyone.
-
-                <br><br>
-
-                This is how we uniquely feed and foster communities. We serve delicious food people feel good about eating, with convenient locations and hours and affordable prices, 
-                and by working hard to offer the speed, choice and personalization our customers expect.  At our best, we don’t just serve food, 
-                we serve moments of feel-good, all with the lighthearted, unpretentious, welcoming, dependable personality consumers know and love.
-            </p>
-
-            <p class="tms">
-                <img src="Partner.png" alt="partner" height="300px">
-            </p>
-
-        </div>
-
-        <div class="vision">
-
-            <p class="titms">
-                Our <b style="color: gold;">Values</b>
-            </p>
-
-            <p class="ims">
-                The backbone of our Brand is, and always has been, 
-                a commitment to a set of core values that define who we are and how we run our business and restaurants.
-
-                <br><br>
-
-                When we live our values every day and use them to make decisions - big and small – we define McDonald’s as a brand our people, and the people we serve, can trust.
-
-            </p>
-
-            <p class="tms">
-                <img src="Work.png" alt="work" height="300px">
-            </p>
-
-        </div>
-
-    </section>
-
-    <section class="prod" id="prod">
-
-        <p class="titms">
-            Our Products
-        </p>
-        <div class="Products">
-            <div class="burger">
-                <img src="burger.jpg" alt="burg"><br>
-                <p class="captions">burger</p>
+                <div class="hero-btn-group">
+                    <a href="#prod" class="btn-primary-order">
+                        <span>Check Products</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="#about" class="btn-secondary-story">Our Story</a>
+                </div>
             </div>
 
-            <div class="chicken">
-                <img src="chicken.jpg" alt="chicken"><br>
-                <p class="captions">chicken</p>
+            <div class="imagengmcdo">
+                <img src="mcdo.png" alt="McDonald's Storefront and Brand Showcase">
+            </div>
+        </section>
+
+        <!-- About & Heritage Section -->
+        <section class="about" id="about">
+            <div class="section-head">
+                <span class="section-badge">Brand Heritage</span>
+                <h2 class="section-title">Our Mission &amp; Purpose</h2>
+                <p class="section-subtext">More than fast food — we serve everyday moments of connection, warmth, and reliable quality.</p>
             </div>
 
-            <div class="fillet">
-                <img src="fillet.jpg" alt="fillet"><br>
-                <p class="captions">chicken fillet</p>
+            <div class="heritage-grid">
+                <article class="heritage-card">
+                    <div class="card-img-wrap">
+                        <img src="tatay.png" alt="Family and Community Roots">
+                    </div>
+                    <div class="card-body">
+                        <h3>Community &amp; Family</h3>
+                        <p>Serving families through every generation, fostering shared smiles and delicious everyday memories in our local neighborhoods.</p>
+                    </div>
+                </article>
+
+                <article class="heritage-card">
+                    <div class="card-img-wrap">
+                        <img src="Partner.png" alt="Partnerships and Mission">
+                    </div>
+                    <div class="card-body">
+                        <h3>Our Mission</h3>
+                        <p>To make delicious feel-good moments easy for everyone, with convenient locations, warm hospitality, and dependable service.</p>
+                    </div>
+                </article>
+
+                <article class="heritage-card">
+                    <div class="card-img-wrap">
+                        <img src="Work.png" alt="Dedication and Values in Work">
+                    </div>
+                    <div class="card-body">
+                        <h3>Our Values</h3>
+                        <p>A commitment to core standards that guide our teams: integrity, respect, continuous growth, and food customers trust.</p>
+                    </div>
+                </article>
             </div>
-        </div>
-        
+        </section>
 
-    </section>
+        <!-- Products Section -->
+        <section class="prod" id="prod">
+            <div class="section-head">
+                <span class="section-badge">Classic Favorites</span>
+                <h2 class="section-title">Featured Menu Selections</h2>
+                <p class="section-subtext">Signature items cooked fresh to order, delivering that unmistakable golden taste.</p>
+            </div>
 
+            <div class="products-grid">
+                <article class="product-item burger">
+                    <span class="product-badge-tag">Classic</span>
+                    <div class="product-img-wrapper">
+                        <img src="burger.jpg" alt="McDonald's Signature Burger">
+                    </div>
+                    <h4>Signature Burger</h4>
+                    <p class="product-desc">100% pure beef patty seasoned to perfection with pickles, minced onions, and signature sauce.</p>
+                    <button type="button" class="product-order-btn">Order Now</button>
+                </article>
+
+                <article class="product-item chicken">
+                    <span class="product-badge-tag">Crispy Crunch</span>
+                    <div class="product-img-wrapper">
+                        <img src="chicken.jpg" alt="Crispy Fried Chicken">
+                    </div>
+                    <h4>Crispy Chicken</h4>
+                    <p class="product-desc">Golden-brown, extra crispy fried chicken packed with savory spices and tender, juicy meat inside.</p>
+                    <button type="button" class="product-order-btn">Order Now</button>
+                </article>
+
+                <article class="product-item fillet">
+                    <span class="product-badge-tag">All-Day Favorite</span>
+                    <div class="product-img-wrapper">
+                        <img src="fillet.jpg" alt="Savory Chicken Fillet">
+                    </div>
+                    <h4>Chicken Fillet</h4>
+                    <p class="product-desc">Tender chicken breast fillet served with savory warm gravy and perfectly steamed fragrant rice.</p>
+                    <button type="button" class="product-order-btn">Order Now</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer id="con">
         <div class="footer-container">
             <div class="footer-col">
                 <h3>McDonald's</h3>
-                <p>Making delicious feel-good moments easy for everyone since 1940.</p>
+                <p>Making delicious feel-good moments easy for everyone since 1940. Built with pride for IT31 Web Systems and Technologies.</p>
             </div>
-            
+
             <div class="footer-col">
-                <h4>Quick Links</h4>
+                <h4>Navigation</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About &amp; Story</a></li>
+                    <li><a href="#prod">Products &amp; Menu</a></li>
+                    <li><a href="#con">Contact Us</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Connect With Us</h4>
-                <p>Follow us on social media for the latest updates and promos.</p>
+                <h4>Social &amp; Connect</h4>
+                <p>Follow our channels for seasonal releases, community stories, and promo drops.</p>
                 <div class="social-links">
-                    <a href="#">Facebook</a> | 
-                    <a href="#">Instagram</a> | 
+                    <a href="#">Facebook</a>
+                    <span>•</span>
+                    <a href="#">Instagram</a>
+                    <span>•</span>
                     <a href="#">Twitter</a>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 McDonald's Corporation. All Rights Reserved.</p>
+            <p>&copy; 2026 McDonald's Showcase. Academic Submission by Andrei — BSIT 3rd Year.</p>
         </div>
     </footer>
-    
+
 </body>
 </html>
